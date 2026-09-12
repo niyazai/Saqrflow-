@@ -18,14 +18,14 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30 select-none pointer-events-none"
+          className="object-cover object-center opacity-85 select-none pointer-events-none"
         />
-        {/* Subtle architectural grid pattern overlay */}
-        <div className="absolute inset-0 c3-grid-pattern opacity-25 pointer-events-none" />
         
-        {/* Dual radial & linear vignette gradients for crisp text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/30 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-black pointer-events-none" />
+        {/* Balanced contrast overlay: preserves photo clarity while keeping typography crisp */}
+        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
+        
+        {/* Smooth gradient fading into the black section below */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}
@@ -33,14 +33,14 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
           {/* Left Column: Huge Headline */}
           <div className="lg:col-span-8">
-            <h1 className="text-4xl sm:text-6xl lg:text-[76px] font-bold tracking-[-0.03em] leading-[1.05] text-white font-sans">
+            <h1 className="text-4xl sm:text-6xl lg:text-[76px] font-bold tracking-[-0.03em] leading-[1.05] text-white font-sans drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
               The Operating System for Enterprise Automation
             </h1>
           </div>
 
           {/* Right Column: Subtitle */}
           <div className="lg:col-span-4 lg:pb-3">
-            <p className="text-lg lg:text-xl text-neutral-300 font-normal leading-relaxed">
+            <p className="text-lg lg:text-xl text-neutral-200 font-normal leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
               Turn operational data into real-time decision making, flawless lead routing, and autonomous execution at scale.
             </p>
           </div>
