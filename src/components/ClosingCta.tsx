@@ -10,11 +10,6 @@ export default function ClosingCta() {
 
       <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal>
-          <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-md border border-white/10 bg-white/[0.04] text-xs font-mono tracking-widest uppercase text-neutral-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
-            DIRECT ARCHITECTURAL CONSULTATION
-          </div>
-
           <h2 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-5xl font-sans leading-tight">
             Stop leads falling through the cracks between your tools.
           </h2>

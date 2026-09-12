@@ -104,8 +104,7 @@ export default function Pricing() {
                 }`}
               >
                 {tier.highlight && (
-                  <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-md bg-neutral-100 border border-neutral-300 px-2.5 py-1 text-[11.5px] font-mono font-semibold text-neutral-800">
-                    <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
+                  <span className="mb-4 inline-flex w-fit items-center rounded-md bg-neutral-100 border border-neutral-300 px-2.5 py-1 text-[11.5px] font-mono font-semibold text-neutral-800">
                     {spotsLeft} of {FOUNDING_ACCESS_TOTAL_SPOTS} spots available
                   </span>
                 )}
@@ -130,10 +129,10 @@ export default function Pricing() {
                   {tier.features.map((f) => (
                     <li
                       key={f}
-                      className="flex gap-2.5 text-[13.5px] leading-relaxed text-neutral-600"
+                      className="flex items-start gap-2.5 text-[13.5px] leading-relaxed text-neutral-600"
                     >
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
-                      {f}
+                      <span className="text-neutral-900 font-bold shrink-0">✓</span>
+                      <span>{f}</span>
                     </li>
                   ))}
                 </ul>

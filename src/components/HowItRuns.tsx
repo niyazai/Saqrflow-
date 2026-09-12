@@ -30,7 +30,7 @@ const STEPS = [
 
 export default function HowItRuns() {
   return (
-    <section className="bg-[#f8f9fa] text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
+    <section id="how-it-runs" className="bg-[#f8f9fa] text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
           <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">

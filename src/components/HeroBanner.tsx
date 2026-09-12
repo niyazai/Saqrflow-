@@ -33,15 +33,15 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end">
           {/* Left Column: Huge Headline */}
           <div className="lg:col-span-8">
-            <h1 className="text-4xl sm:text-6xl lg:text-[76px] font-bold tracking-[-0.03em] leading-[1.05] text-white font-sans drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
-              The Operating System for Enterprise Automation
+            <h1 className="text-4xl sm:text-5xl lg:text-[68px] font-bold tracking-[-0.03em] leading-[1.08] text-white font-sans drop-shadow-[0_4px_24px_rgba(0,0,0,0.9)]">
+              We stop leads falling between ads, forms, the CRM, and sales follow-up.
             </h1>
           </div>
 
           {/* Right Column: Subtitle */}
           <div className="lg:col-span-4 lg:pb-3">
             <p className="text-lg lg:text-xl text-neutral-200 font-normal leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]">
-              Turn operational data into real-time decision making, flawless lead routing, and autonomous execution at scale.
+              SaqrFlow builds the CRM, automation, and lead-flow systems that agencies deliver to their own clients — under your brand, never ours.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
             href="/#system"
             className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded-md transition-all"
           >
-            <span>Explore The System</span>
+            <span>The 6-Step System</span>
             <span className="text-neutral-400 font-mono">↓</span>
           </a>
 
@@ -81,7 +81,7 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
             href="/team"
             className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded-md transition-all"
           >
-            <span>Meet The Team</span>
+            <span>Team & Portfolios</span>
             <span className="text-neutral-400 font-mono">→</span>
           </a>
         </div>
@@ -91,16 +91,15 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
       <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 lg:px-12 pt-6">
         <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-white/10 text-xs font-mono text-neutral-400">
           <div className="flex items-center gap-4 sm:gap-8">
-            <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
-              CONNECTED PIPELINES: ACTIVE
+            <span>
+              WHITE-LABEL TECHNICAL FULFILMENT FOR AGENCIES
             </span>
-            <span className="hidden md:inline">
-              WHITE-LABEL FULFILMENT FOR AGENCIES
+            <span className="hidden md:inline text-neutral-500">
+              GOHIGHLEVEL · HUBSPOT · ZAPIER · N8N
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-neutral-300">DETERMINISTIC DATA INTEGRATION</span>
+            <span className="text-neutral-300">FIXED MONTHLY PRICING · NO HOURLY RATE</span>
           </div>
         </div>
       </div>

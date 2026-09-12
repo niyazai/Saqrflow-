@@ -47,7 +47,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
 
         {submitted ? (
           <div className="py-12 text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -62,8 +62,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
         ) : (
           <>
             <div className="mb-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-neutral-400 uppercase tracking-widest mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+              <div className="inline-flex items-center text-xs font-mono text-neutral-400 uppercase tracking-widest mb-2">
                 TECHNICAL STRATEGY BRIEFING
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white font-sans">
@@ -128,13 +127,10 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                     className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white focus:outline-none focus:border-white/40"
                   >
                     <option value="Marketing & Lead Gen Agencies">Marketing & Lead Gen Agencies</option>
-                    <option value="Defense & Intelligence">Defense & Intelligence</option>
-                    <option value="Maritime">Maritime</option>
-                    <option value="Manufacturing">Manufacturing</option>
-                    <option value="Federal">Federal</option>
-                    <option value="Oil & Gas">Oil & Gas</option>
-                    <option value="Utilities">Utilities</option>
-                    <option value="Healthcare">Healthcare</option>
+                    <option value="Web & Software Agencies">Web & Software Agencies</option>
+                    <option value="CRM & Automation Agencies">CRM & Automation Agencies</option>
+                    <option value="High-Ticket B2B Services">High-Ticket B2B Services</option>
+                    <option value="Agency / Consultancy">Agency / Consultancy</option>
                   </select>
                 </div>
               </div>
@@ -155,7 +151,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 h-12 rounded bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors shadow-lg"
+                  className="w-full flex items-center justify-center gap-2 h-12 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors shadow-lg"
                 >
                   <span>Submit Technical Request</span>
                   <span>↗</span>

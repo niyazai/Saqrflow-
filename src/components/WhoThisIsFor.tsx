@@ -34,7 +34,7 @@ export default function WhoThisIsFor() {
           <Reveal delayMs={80}>
             <div className="h-full rounded-2xl border border-neutral-300 bg-neutral-50/80 p-8 shadow-sm">
               <div className="flex items-center gap-3">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
+                <span className="flex h-7 w-7 items-center justify-center rounded-md bg-emerald-100 text-emerald-700">
                   <svg
                     viewBox="0 0 16 16"
                     fill="none"
@@ -58,10 +58,10 @@ export default function WhoThisIsFor() {
                 {GOOD_FIT.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 text-[14.5px] leading-relaxed text-neutral-700"
+                    className="flex items-start gap-3 text-[14.5px] leading-relaxed text-neutral-700"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
-                    {item}
+                    <span className="text-emerald-700 font-bold shrink-0">✓</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>
@@ -71,7 +71,7 @@ export default function WhoThisIsFor() {
           <Reveal delayMs={160}>
             <div className="h-full rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
               <div className="flex items-center gap-3">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-100 text-neutral-500">
+                <span className="flex h-7 w-7 items-center justify-center rounded-md bg-neutral-100 text-neutral-500">
                   <svg
                     viewBox="0 0 16 16"
                     fill="none"
@@ -94,10 +94,10 @@ export default function WhoThisIsFor() {
                 {NOT_A_FIT.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 text-[14.5px] leading-relaxed text-neutral-500"
+                    className="flex items-start gap-3 text-[14.5px] leading-relaxed text-neutral-500"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-300" />
-                    {item}
+                    <span className="text-neutral-400 font-bold shrink-0">✕</span>
+                    <span>{item}</span>
                   </li>
                 ))}
               </ul>

@@ -43,19 +43,17 @@ export default function Proof() {
             than a quote we could have written ourselves.
           </p>
           <ul className="mt-6 space-y-3.5 text-[14.5px] text-neutral-600">
-            <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
-              Qualifies a lead automatically, in the channel they messaged in.
+            <li className="flex items-start gap-3">
+              <span className="text-neutral-900 font-bold shrink-0">✓</span>
+              <span>Qualifies a lead automatically, in the channel they messaged in.</span>
             </li>
-            <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
-              Includes a forced failure — an unrecognised reply — so you can
-              see it degrade gracefully instead of breaking.
+            <li className="flex items-start gap-3">
+              <span className="text-neutral-900 font-bold shrink-0">✓</span>
+              <span>Includes a forced failure — an unrecognised reply — so you can see it degrade gracefully instead of breaking.</span>
             </li>
-            <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
-              Hands off to a human the moment it&apos;s unsure, rather than
-              guessing.
+            <li className="flex items-start gap-3">
+              <span className="text-neutral-900 font-bold shrink-0">✓</span>
+              <span>Hands off to a human the moment it&apos;s unsure, rather than guessing.</span>
             </li>
           </ul>
         </Reveal>

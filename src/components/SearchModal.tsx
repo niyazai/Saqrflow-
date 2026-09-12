@@ -3,28 +3,27 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
+import { BOOK_A_CALL_HREF } from "@/lib/content";
+
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
 const SEARCH_ITEMS = [
-  { title: "The 6-Step System Flow (Capture, CRM, Routing, Follow-up)", category: "Core System", href: "#system" },
-  { title: "WhatsApp Lead Qualifier Proof (Graceful degradation)", category: "Live Proof", href: "#proof" },
-  { title: "Pricing: Four Ways To Work Together (£300 - £2,500)", category: "Pricing", href: "#pricing" },
-  { title: "Founding Partner Access (Spots Available)", category: "Pricing", href: "#pricing" },
-  { title: "Who This Is For (Good Fit vs Not a Fit)", category: "Fit Criteria", href: "#fit" },
-  { title: "How An Engagement Runs (5 Steps)", category: "Process", href: "#fit" },
-  { title: "Operating Platform", category: "Platform", href: "#software" },
-  { title: "SaqrFlow Studio (Connectors & Pipelines)", category: "Platform", href: "#software" },
-  { title: "SaqrFlow Code (Autonomous App Synthesis)", category: "Platform", href: "#software" },
-  { title: "Enterprise Applications (40+ Turnkey Apps)", category: "Applications", href: "#software" },
-  { title: "Defense & Intelligence Sector", category: "Industry", href: "#industries" },
-  { title: "Maritime & Naval Operations", category: "Industry", href: "#industries" },
-  { title: "Manufacturing Process & Yield Optimization", category: "Industry", href: "#industries" },
-  { title: "Dow Chemical Enterprise Case Study", category: "Customer Story", href: "#stories" },
-  { title: "Holcim Global Net-Zero Case Study", category: "Customer Story", href: "#stories" },
-  { title: "Baker Hughes Turbomachinery Telemetry", category: "Customer Story", href: "#stories" },
+  { title: "The 6-Step System Flow (Capture, CRM, Routing, Follow-up)", category: "The System", href: "/#system" },
+  { title: "WhatsApp Lead Qualifier Proof (Graceful degradation)", category: "Live Proof", href: "/#proof" },
+  { title: "Pricing: Four Ways To Work Together (£300 - £2,500)", category: "Pricing", href: "/#pricing" },
+  { title: "Founding Partner Access (£1,000/mo locked price)", category: "Pricing", href: "/#pricing" },
+  { title: "Who This Is For (Good Fit vs Not a Fit)", category: "Fit Criteria", href: "/#fit" },
+  { title: "How An Engagement Runs (5 Fixed Steps)", category: "Process", href: "/#how-it-runs" },
+  { title: "Engineering Team & Portfolios", category: "Team", href: "/team" },
+  { title: "Mouaaz — Lead Systems Architect Profile", category: "Team", href: "/team#mouaaz" },
+  { title: "Autonomous WhatsApp Lead Qualifier System", category: "Portfolio", href: "/team#mouaaz" },
+  { title: "Multi-Agency CRM Integration Engine", category: "Portfolio", href: "/team#mouaaz" },
+  { title: "GoHighLevel & HubSpot Custom Pipelines", category: "Integrations", href: "/#system" },
+  { title: "Make & n8n Event Dispatches", category: "Architecture", href: "/#system" },
+  { title: "Book a Strategy Call", category: "Contact", href: BOOK_A_CALL_HREF },
 ];
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
@@ -75,7 +74,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search system flow, proof, pricing, products, or industries..."
+            placeholder="Search system flow, proof, pricing, team, or portfolios..."
             className="w-full bg-transparent text-base text-white placeholder-neutral-500 focus:outline-none"
           />
           <button

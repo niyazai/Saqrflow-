@@ -11,9 +11,7 @@ interface MegaHeaderProps {
 }
 
 export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps) {
-  const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [mobileExpandedSection, setMobileExpandedSection] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,10 +22,6 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMobileSection = (section: string) => {
-    setMobileExpandedSection(mobileExpandedSection === section ? null : section);
-  };
-
   return (
     <>
       <header
@@ -36,10 +30,9 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
             ? "bg-[#000000]/95 backdrop-blur-md border-b border-white/10 shadow-2xl"
             : "bg-[#000000] border-b border-white/10"
         }`}
-        onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-6 lg:px-12">
-          {/* Brand Logo - Pure Clean SaqrFlow without any AI badge */}
+          {/* Brand Logo */}
           <div className="flex items-center gap-8 xl:gap-10">
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/20 p-1 group-hover:border-white/40 transition-colors">
@@ -59,79 +52,34 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center gap-1">
-              {/* Products Menu */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveMenu("products")}
-              >
-                <button
-                  type="button"
-                  className={`px-3.5 py-2 text-[14px] font-medium transition-colors flex items-center gap-1.5 ${
-                    activeMenu === "products"
-                      ? "text-white"
-                      : "text-neutral-300 hover:text-white"
-                  }`}
-                >
-                  Products
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 text-neutral-400 ${
-                      activeMenu === "products" ? "rotate-180 text-white" : ""
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* The System */}
               <Link
-                href="#system"
+                href="/#system"
                 className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
               >
                 The System
               </Link>
 
-              {/* Proof */}
               <Link
-                href="#proof"
+                href="/#proof"
                 className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
               >
                 Proof
               </Link>
 
-              {/* Industries Menu */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveMenu("industries")}
+              <Link
+                href="/#fit"
+                className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
               >
-                <button
-                  type="button"
-                  className={`px-3.5 py-2 text-[14px] font-medium transition-colors flex items-center gap-1.5 ${
-                    activeMenu === "industries"
-                      ? "text-white"
-                      : "text-neutral-300 hover:text-white"
-                  }`}
-                >
-                  Industries
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 text-neutral-400 ${
-                      activeMenu === "industries" ? "rotate-180 text-white" : ""
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-              </div>
+                Who This Is For
+              </Link>
 
-              {/* Pricing */}
+              <Link
+                href="/#how-it-runs"
+                className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
+              >
+                How It Runs
+              </Link>
+
               <Link
                 href="/#pricing"
                 className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
@@ -139,41 +87,12 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                 Pricing
               </Link>
 
-              {/* Team & Portfolios */}
               <Link
                 href="/team"
                 className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
               >
-                Team
+                Team & Portfolios
               </Link>
-
-              {/* Company */}
-              <div
-                className="relative"
-                onMouseEnter={() => setActiveMenu("company")}
-              >
-                <button
-                  type="button"
-                  className={`px-3.5 py-2 text-[14px] font-medium transition-colors flex items-center gap-1.5 ${
-                    activeMenu === "company"
-                      ? "text-white"
-                      : "text-neutral-300 hover:text-white"
-                  }`}
-                >
-                  Company
-                  <svg
-                    className={`w-3.5 h-3.5 transition-transform duration-200 text-neutral-400 ${
-                      activeMenu === "company" ? "rotate-180 text-white" : ""
-                    }`}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
-                </button>
-              </div>
             </nav>
           </div>
 
@@ -257,270 +176,12 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
           </div>
         </div>
 
-        {/* Desktop Mega Dropdowns */}
-        {activeMenu && (
-          <div
-            className="hidden lg:block absolute left-0 top-[72px] w-full bg-[#080a0e] border-b border-white/15 shadow-2xl transition-all animate-in fade-in slide-in-from-top-1 duration-200"
-            onMouseEnter={() => setActiveMenu(activeMenu)}
-            onMouseLeave={() => setActiveMenu(null)}
-          >
-            <div className="mx-auto max-w-[1440px] px-12 py-10">
-              {activeMenu === "products" && (
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
-                      Architecture & Systems
-                    </p>
-                    <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
-                      Products & Systems
-                    </h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-                      A complete suite of applications, CRM workflows, and automated pipelines for agencies and enterprises.
-                    </p>
-                    <Link
-                      href="#system"
-                      onClick={() => setActiveMenu(null)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-neutral-300 transition-colors"
-                    >
-                      <span>Explore The 6-Step System Flow</span>
-                      <span>→</span>
-                    </Link>
-                  </div>
-
-                  <div className="col-span-5 grid grid-cols-2 gap-8 px-4">
-                    <div>
-                      <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 mb-4 pb-2 border-b border-white/10">
-                        Applications
-                      </p>
-                      <ul className="space-y-3">
-                        {[
-                          { title: "SaqrFlow Reliability", href: "#software" },
-                          { title: "Production Scheduling", href: "#software" },
-                          { title: "Demand Planning", href: "#software" },
-                          { title: "WhatsApp Lead Qualifier", href: "#proof" },
-                          { title: "CRM Lead Routing", href: "#system" },
-                          { title: "All 40+ Applications", href: "#software" },
-                        ].map((item, idx) => (
-                          <li key={idx}>
-                            <Link
-                              href={item.href}
-                              onClick={() => setActiveMenu(null)}
-                              className="text-sm text-neutral-400 hover:text-white transition-colors block py-0.5"
-                            >
-                              {item.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 mb-4 pb-2 border-b border-white/10">
-                        Platform & Stack
-                      </p>
-                      <ul className="space-y-3">
-                        {[
-                          { title: "SaqrFlow Studio", desc: "Low-code application studio" },
-                          { title: "SaqrFlow Code", desc: "Autonomous application builder" },
-                          { title: "SaqrFlow Intelligence", desc: "Enterprise search & reasoning" },
-                          { title: "Operating Platform", desc: "Unified enterprise runtime" },
-                        ].map((item, idx) => (
-                          <li key={idx} className="group">
-                            <Link
-                              href="#software"
-                              onClick={() => setActiveMenu(null)}
-                              className="block"
-                            >
-                              <span className="text-sm font-medium text-neutral-300 group-hover:text-white transition-colors block">
-                                {item.title}
-                              </span>
-                              <span className="text-xs text-neutral-500 block">
-                                {item.desc}
-                              </span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div className="col-span-4 pl-6 border-l border-white/10">
-                    <div className="rounded-xl border border-white/10 bg-[#0d1117] p-5 hover:border-white/20 transition-all">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-300 bg-white/5 px-2 py-0.5 rounded border border-white/10">
-                          Lead Qualification Proof
-                        </span>
-                        <span className="text-xs text-neutral-400">Live Demo</span>
-                      </div>
-                      <h4 className="text-sm font-semibold text-white mb-2">
-                        Watch it handle a lead — including the moment it fails
-                      </h4>
-                      <p className="text-xs text-neutral-400 mb-4 leading-normal">
-                        See our WhatsApp lead-qualification workflow with forced failure and graceful degradation directly in action.
-                      </p>
-                      <Link
-                        href="#proof"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-xs font-semibold text-white hover:text-neutral-300 inline-flex items-center gap-1"
-                      >
-                        <span>View Lead Qualifier Proof</span>
-                        <span>›</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeMenu === "industries" && (
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
-                      Sectors
-                    </p>
-                    <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
-                      Industries
-                    </h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-                      Engineered for complex enterprise operating models and modern marketing agencies.
-                    </p>
-                    <Link
-                      href="#industries"
-                      onClick={() => setActiveMenu(null)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-neutral-300 transition-colors"
-                    >
-                      <span>View All Industries</span>
-                      <span>→</span>
-                    </Link>
-                  </div>
-
-                  <div className="col-span-5 px-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      {[
-                        { name: "Marketing & Lead Gen Agencies", href: "#fit" },
-                        { name: "Defense & Intelligence", href: "#industries" },
-                        { name: "Maritime & Naval", href: "#industries" },
-                        { name: "Manufacturing & Industrial", href: "#industries" },
-                        { name: "Federal & Public Sector", href: "#industries" },
-                        { name: "Oil & Gas Operations", href: "#industries" },
-                        { name: "Power & Utilities", href: "#industries" },
-                        { name: "Healthcare & Life Sciences", href: "#industries" },
-                      ].map((ind, i) => (
-                        <Link
-                          key={i}
-                          href={ind.href}
-                          onClick={() => setActiveMenu(null)}
-                          className="p-3 rounded-lg border border-white/5 hover:border-white/20 hover:bg-white/[0.02] transition-colors block"
-                        >
-                          <p className="text-sm font-medium text-neutral-200 hover:text-white">
-                            {ind.name}
-                          </p>
-                          <span className="text-xs text-neutral-500">
-                            Purpose-built applications ›
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="col-span-4 pl-6 border-l border-white/10">
-                    <div className="rounded-xl border border-white/10 bg-[#0d1117] p-5">
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-300 bg-white/5 px-2 py-0.5 rounded border border-white/10">
-                          Partner Network
-                        </span>
-                        <span className="text-xs text-neutral-500">UK Agencies</span>
-                      </div>
-                      <h4 className="text-sm font-semibold text-white mb-2 leading-snug">
-                        White-Label Delivery For Agencies
-                      </h4>
-                      <p className="text-xs text-neutral-400 mb-4 leading-relaxed">
-                        Full-service technical fulfilment delivered under your agency brand. We handle CRM, automations, and dashboards.
-                      </p>
-                      <Link
-                        href="#fit"
-                        onClick={() => setActiveMenu(null)}
-                        className="text-xs font-semibold text-white hover:text-neutral-300 inline-flex items-center gap-1"
-                      >
-                        <span>Check Fit Criteria</span>
-                        <span>↗</span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {activeMenu === "company" && (
-                <div className="grid grid-cols-12 gap-8">
-                  <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
-                      Enterprise Profile
-                    </p>
-                    <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
-                      Company & Fit
-                    </h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-                      Transparent pricing, clear operational scope, and battle-tested execution.
-                    </p>
-                  </div>
-
-                  <div className="col-span-5 px-4">
-                    <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 mb-4 pb-2 border-b border-white/10">
-                      Engage SaqrFlow
-                    </p>
-                    <div className="grid grid-cols-2 gap-4">
-                      {[
-                        { title: "Team & Portfolios", href: "/team" },
-                        { title: "Who This Is For", href: "/#fit" },
-                        { title: "How An Engagement Runs", href: "/#fit" },
-                        { title: "Pricing & Founding Access", href: "/#pricing" },
-                        { title: "Customer Case Studies", href: "/#stories" },
-                        { title: "The 6-Step System", href: "/#system" },
-                        { title: "Book a Strategy Call", href: BOOK_A_CALL_HREF },
-                      ].map((item, idx) => (
-                        <Link
-                          key={idx}
-                          href={item.href}
-                          onClick={() => setActiveMenu(null)}
-                          className="text-sm text-neutral-400 hover:text-white transition-colors block py-1"
-                        >
-                          {item.title}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-
-                  <div className="col-span-4 pl-6 border-l border-white/10">
-                    <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 mb-4 pb-2 border-b border-white/10">
-                      Pricing & Availability
-                    </p>
-                    <div className="p-4 rounded-xl border border-white/15 bg-white/[0.03] text-xs text-neutral-300 space-y-2">
-                      <p className="text-white font-semibold text-sm">
-                        Founding Access Available
-                      </p>
-                      <p className="text-neutral-400 leading-relaxed">
-                        Reserved for early partners with 6–12 months of locked price protection at £1,000/mo.
-                      </p>
-                      <Link
-                        href="#pricing"
-                        onClick={() => setActiveMenu(null)}
-                        className="inline-block text-white font-semibold hover:text-neutral-300 pt-1 underline underline-offset-4"
-                      >
-                        View 4 Pricing Tiers →
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
-
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="lg:hidden fixed inset-x-0 top-[72px] bottom-0 bg-[#080a0e] border-t border-white/10 p-6 overflow-y-auto z-50 flex flex-col justify-between">
             <div className="space-y-4">
               {/* Search Bar Mobile */}
-              <div className="mb-4">
+              <div className="mb-6">
                 <button
                   type="button"
                   onClick={() => {
@@ -540,122 +201,35 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                 </button>
               </div>
 
-              {/* Direct Quick Nav Links */}
-              <div className="grid grid-cols-3 gap-2 pb-4 border-b border-white/10">
-                <Link
-                  href="/#system"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
-                >
-                  The System
-                </Link>
-                <Link
-                  href="/#proof"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
-                >
-                  Proof
-                </Link>
-                <Link
-                  href="/#pricing"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-white"
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/team"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/10 text-center text-xs font-semibold text-white col-span-2"
-                >
-                  Team & Portfolios →
-                </Link>
-                <Link
-                  href="/#fit"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
-                >
-                  Fit Criteria
-                </Link>
-              </div>
-
-              {/* Accordion Sections */}
-              {[
-                {
-                  id: "products",
-                  title: "Products & Systems",
-                  items: [
-                    { label: "The 6-Step System", href: "/#system" },
-                    { label: "WhatsApp Qualifier Proof", href: "/#proof" },
-                    { label: "Engineering Team & Portfolios", href: "/team" },
-                    { label: "Client Inbound Architecture", href: "/#system" },
-                  ],
-                },
-                {
-                  id: "industries",
-                  title: "Industries & Sectors",
-                  items: [
-                    { label: "Marketing & Lead Gen Agencies", href: "/#fit" },
-                    { label: "Defense & Intelligence", href: "/#industries" },
-                    { label: "Maritime", href: "/#industries" },
-                    { label: "Manufacturing", href: "/#industries" },
-                    { label: "Oil & Gas", href: "/#industries" },
-                    { label: "Utilities", href: "/#industries" },
-                  ],
-                },
-                {
-                  id: "company",
-                  title: "Company & Pricing",
-                  items: [
-                    { label: "Team & Portfolios", href: "/team" },
-                    { label: "Four Ways To Work Together (Pricing)", href: "/#pricing" },
-                    { label: "Who This Is For (Fit Criteria)", href: "/#fit" },
-                    { label: "Customer Stories", href: "/#stories" },
-                    { label: "Book a Call", href: BOOK_A_CALL_HREF },
-                  ],
-                },
-              ].map((section) => (
-                <div key={section.id} className="border-b border-white/10 pb-3">
-                  <button
-                    type="button"
-                    onClick={() => toggleMobileSection(section.id)}
-                    className="flex w-full items-center justify-between py-2 text-base font-medium text-white"
+              {/* Direct Clean Navigation Links */}
+              <nav className="flex flex-col space-y-1">
+                {[
+                  { label: "The System", href: "/#system" },
+                  { label: "Proof (WhatsApp Qualifier)", href: "/#proof" },
+                  { label: "Who This Is For", href: "/#fit" },
+                  { label: "How It Runs", href: "/#how-it-runs" },
+                  { label: "Pricing Tiers", href: "/#pricing" },
+                  { label: "Team & Portfolios", href: "/team" },
+                ].map((item, idx) => (
+                  <Link
+                    key={idx}
+                    href={item.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center justify-between py-3 px-3 rounded-lg text-base font-medium text-neutral-200 hover:text-white hover:bg-white/5 transition-colors"
                   >
-                    <span>{section.title}</span>
-                    <svg
-                      className={`w-4 h-4 transition-transform ${
-                        mobileExpandedSection === section.id ? "rotate-180" : ""
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <polyline points="6 9 12 15 18 9" strokeWidth="2" />
-                    </svg>
-                  </button>
-                  {mobileExpandedSection === section.id && (
-                    <ul className="mt-2 space-y-2.5 pl-4 pb-2">
-                      {section.items.map((item, idx) => (
-                        <li key={idx}>
-                          <Link
-                            href={item.href}
-                            onClick={() => setMobileMenuOpen(false)}
-                            className="text-sm text-neutral-400 hover:text-white block py-0.5"
-                          >
-                            {item.label}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
+                    <span>{item.label}</span>
+                    <span className="text-neutral-500 font-mono">→</span>
+                  </Link>
+                ))}
+              </nav>
             </div>
 
-            <div className="pt-8 pb-6 border-t border-white/10">
+            {/* Mobile Drawer Bottom CTA */}
+            <div className="pt-8 pb-6 border-t border-white/10 mt-8">
               <a
                 href={BOOK_A_CALL_HREF}
-                className="w-full flex items-center justify-center gap-2 h-12 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 h-12 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors shadow-lg"
               >
                 <span>Book a Call</span>
                 <span>↗</span>

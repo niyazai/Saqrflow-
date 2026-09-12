@@ -36,10 +36,6 @@ export default function TeamPage() {
           
           <div className="relative mx-auto max-w-[1440px] px-6 lg:px-12">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full border border-white/10 bg-white/[0.03] text-xs font-mono text-neutral-300">
-                <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                SYSTEMS ARCHITECTS & ENGINEERS
-              </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
                 Engineering Team & Portfolios
               </h1>
@@ -186,7 +182,6 @@ export default function TeamPage() {
                   <div className="p-8 lg:p-10">
                     <div className="flex items-center justify-between mb-6 pb-3 border-b border-white/10">
                       <div className="flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-white" />
                         <h3 className="text-xs font-mono uppercase tracking-widest text-neutral-300">
                           Selected Portfolio Projects & Architecture
                         </h3>
@@ -281,16 +276,16 @@ export default function TeamPage() {
                   SaqrFlow operates both as an elite core delivery team and a technical partner network for agency operators. Each engineer on our roster maintains direct ownership over the pipelines they architect.
                 </p>
                 <div className="space-y-3 font-mono text-xs text-neutral-600 mb-8">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-900" />
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-neutral-900 font-bold">✓</span>
                     <span>Easily add team members and portfolio cards via <code>src/lib/teamData.ts</code></span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-900" />
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-neutral-900 font-bold">✓</span>
                     <span>Direct links to personal portfolio sites, GitHub repositories, and live client proof</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-neutral-900" />
+                  <div className="flex items-center gap-2.5">
+                    <span className="text-neutral-900 font-bold">✓</span>
                     <span>Verified delivery badges for CRM, automation, and lead qualification projects</span>
                   </div>
                 </div>

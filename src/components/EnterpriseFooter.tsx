@@ -59,13 +59,13 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                { name: "Step 01: Capture", href: "#system" },
-                { name: "Step 02: CRM", href: "#system" },
-                { name: "Step 03: Routing", href: "#system" },
-                { name: "Step 04: Follow-up", href: "#system" },
-                { name: "Step 05: Integration", href: "#system" },
-                { name: "Step 06: Reporting", href: "#system" },
-                { name: "Lead Qualification Proof", href: "#proof" },
+                { name: "Step 01: Capture", href: "/#system" },
+                { name: "Step 02: CRM", href: "/#system" },
+                { name: "Step 03: Routing", href: "/#system" },
+                { name: "Step 04: Follow-up", href: "/#system" },
+                { name: "Step 05: Integration", href: "/#system" },
+                { name: "Step 06: Reporting", href: "/#system" },
+                { name: "WhatsApp Lead Qualifier", href: "/#proof" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
@@ -76,42 +76,23 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </ul>
           </div>
 
-          {/* Column 3: Platform & Industries */}
+          {/* Column 3: Architecture & Stack */}
           <div className="lg:col-span-2">
             <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
-              Architecture & Team
+              Architecture
             </p>
-            <ul className="space-y-2.5 text-sm text-neutral-400 mb-8">
+            <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                { name: "Engineering Team", href: "/team" },
-                { name: "Portfolio Systems", href: "/team" },
-                { name: "The 6-Step Flow", href: "/#system" },
-                { name: "WhatsApp Qualifier", href: "/#proof" },
+                { name: "Inbound Lead Routing", href: "/#system" },
+                { name: "WhatsApp Business API", href: "/#proof" },
+                { name: "Make / n8n Webhooks", href: "/#system" },
+                { name: "CRM Synchronization", href: "/#system" },
+                { name: "Failover Dead-Letter Queues", href: "/#proof" },
+                { name: "Team & Portfolios", href: "/team" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
                     {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
-              Industries
-            </p>
-            <ul className="space-y-2.5 text-sm text-neutral-400">
-              {[
-                "Marketing Agencies",
-                "Defense & Intelligence",
-                "Maritime",
-                "Manufacturing",
-                "Oil & Gas",
-                "Utilities",
-                "Healthcare",
-              ].map((item, i) => (
-                <li key={i}>
-                  <Link href="/#industries" className="hover:text-white transition-colors block py-0.5">
-                    {item}
                   </Link>
                 </li>
               ))}
@@ -127,11 +108,10 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
               {[
                 { name: "Paid Proof (£300)", href: "/#pricing" },
                 { name: "Founding Access (£1,000/mo)", href: "/#pricing" },
-                { name: "Standard (£1,500/mo)", href: "/#pricing" },
-                { name: "Advanced (£2,500/mo)", href: "/#pricing" },
+                { name: "Standard Retainer (£1,500/mo)", href: "/#pricing" },
+                { name: "Scale & Custom (£2,500/mo)", href: "/#pricing" },
                 { name: "Good Fit vs Not a Fit", href: "/#fit" },
-                { name: "How It Runs (5 Steps)", href: "/#fit" },
-                { name: "Customer Stories", href: "/#stories" },
+                { name: "How An Engagement Runs", href: "/#how-it-runs" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
@@ -142,7 +122,7 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </ul>
           </div>
 
-          {/* Column 5: Company */}
+          {/* Column 5: Company & Portfolios */}
           <div className="lg:col-span-2">
             <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
               Company
@@ -150,9 +130,9 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
                 { name: "Team & Portfolios", href: "/team" },
-                { name: "Agency Partner Network", href: "/team" },
-                { name: "Customer Stories", href: "/#stories" },
-                { name: "Fit & Criteria", href: "/#fit" },
+                { name: "Lead Systems Architect", href: "/team#mouaaz" },
+                { name: "Verified Delivery Systems", href: "/team" },
+                { name: "Agency Partner Fit", href: "/#fit" },
                 { name: "Book Strategy Call", href: BOOK_A_CALL_HREF },
               ].map((item, i) => (
                 <li key={i}>

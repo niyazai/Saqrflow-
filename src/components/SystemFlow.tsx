@@ -107,7 +107,7 @@ export default function SystemFlow() {
                   className={`reveal ${isVisible ? "is-visible" : ""}`}
                   style={{ transitionDelay: `${150 + i * 120}ms` }}
                 >
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-neutral-300 bg-white text-[13px] font-bold text-neutral-900 shadow-sm">
+                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-lg border border-neutral-300 bg-white text-[13px] font-bold text-neutral-900 shadow-sm">
                     {step.n}
                   </div>
                   <h3 className="mt-4 text-[16px] font-bold text-neutral-950">

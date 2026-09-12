@@ -3,11 +3,8 @@
 import { useState } from "react";
 import MegaHeader from "@/components/MegaHeader";
 import HeroBanner from "@/components/HeroBanner";
-import AcceleratorPromo from "@/components/AcceleratorPromo";
 import SystemFlow from "@/components/SystemFlow";
 import Proof from "@/components/Proof";
-import IndustryCarousel from "@/components/IndustryCarousel";
-import CustomerStories from "@/components/CustomerStories";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import HowItRuns from "@/components/HowItRuns";
 import Pricing from "@/components/Pricing";
@@ -29,23 +26,14 @@ export default function Home() {
       />
 
       <main id="main-content">
-        {/* Hero Banner with Authentic Non-AI Infrastructure Photo */}
+        {/* Hero Banner: Simple, Authentic, Agency Value Proposition */}
         <HeroBanner onOpenDemo={() => setDemoOpen(true)} />
-
-        {/* Executive Workflow Immersion Banner */}
-        <AcceleratorPromo onOpenDemo={() => setDemoOpen(true)} />
 
         {/* WHITE SECTION: The 6-Step Connected System */}
         <SystemFlow />
 
         {/* LIGHT SECTION: WhatsApp Lead Qualification Proof */}
         <Proof />
-
-        {/* DARK SECTION: Built for Your Industry Carousel */}
-        <IndustryCarousel onOpenDemo={() => setDemoOpen(true)} />
-
-        {/* DARK SECTION: Customer Stories */}
-        <CustomerStories onOpenDemo={() => setDemoOpen(true)} />
 
         {/* WHITE SECTION: Who This Is For (Good fit vs Not a fit) */}
         <WhoThisIsFor />
