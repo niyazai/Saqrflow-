@@ -3,7 +3,6 @@
 import { useState } from "react";
 import MegaHeader from "@/components/MegaHeader";
 import HeroBanner from "@/components/HeroBanner";
-import LogoMarquee from "@/components/LogoMarquee";
 import AcceleratorPromo from "@/components/AcceleratorPromo";
 import SystemFlow from "@/components/SystemFlow";
 import Proof from "@/components/Proof";
@@ -24,51 +23,48 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-black text-white selection:bg-white/20 selection:text-white">
-      {/* C3.ai Style Enterprise Navigation & Mega Dropdowns */}
+      {/* Enterprise Header & Mega Navigation */}
       <MegaHeader
         onOpenDemo={() => setDemoOpen(true)}
         onOpenSearch={() => setSearchOpen(true)}
       />
 
       <main id="main-content">
-        {/* C3.ai Style Hero Banner with Animated Targeting Telemetry */}
+        {/* Hero Banner with Authentic Non-AI Infrastructure Photo */}
         <HeroBanner onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* Organizations That Run on SaqrFlow - Infinite Marquee */}
-        <LogoMarquee />
-
-        {/* Executive AI Accelerator Banner */}
+        {/* Executive Workflow Immersion Banner */}
         <AcceleratorPromo onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* CORE DATA: The 6-Step Connected System (Capture, CRM, Routing, Follow-up, Integration, Reporting) */}
+        {/* WHITE SECTION: The 6-Step Connected System */}
         <SystemFlow />
 
-        {/* CORE DATA: Watch it handle a lead — Proof with graceful degradation & human hand-off */}
+        {/* LIGHT SECTION: WhatsApp Lead Qualification Proof */}
         <Proof />
 
-        {/* Built for Your Industry - Interactive Tabbed Carousel */}
+        {/* DARK SECTION: Built for Your Industry Carousel */}
         <IndustryCarousel onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* Our Software - High Contrast Enterprise Platform & Applications Suite */}
+        {/* WHITE SECTION: Our Software Suite */}
         <SoftwareSuite onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* Customer Stories - Expandable High-Impact Case Studies (Dow, Holcim, Baker Hughes, Defense) */}
+        {/* DARK SECTION: Customer Stories */}
         <CustomerStories onOpenDemo={() => setDemoOpen(true)} />
 
-        {/* CORE DATA: Who This Is For (Good fit vs Not a fit) */}
+        {/* WHITE SECTION: Who This Is For (Good fit vs Not a fit) */}
         <WhoThisIsFor />
 
-        {/* CORE DATA: How An Engagement Runs (5 Steps) */}
+        {/* LIGHT SECTION: How An Engagement Runs (5 Steps) */}
         <HowItRuns />
 
-        {/* CORE DATA: Pricing — Four Ways To Work Together & Founding Access */}
+        {/* WHITE SECTION: Pricing — Four Ways To Work Together */}
         <Pricing />
 
-        {/* CORE DATA: Closing CTA */}
+        {/* DARK SECTION: Closing CTA */}
         <ClosingCta />
       </main>
 
-      {/* Comprehensive Global Enterprise Footer */}
+      {/* Global Enterprise Footer */}
       <EnterpriseFooter onOpenDemo={() => setDemoOpen(true)} />
 
       {/* Interactive Modals */}

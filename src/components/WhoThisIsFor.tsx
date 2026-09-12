@@ -18,49 +18,49 @@ const NOT_A_FIT = [
 
 export default function WhoThisIsFor() {
   return (
-    <section id="fit" className="border-b border-border/60 py-24 sm:py-32">
+    <section id="fit" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-medium uppercase tracking-wider text-amber">
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
             Who this is for
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             We&apos;d rather you self-select in five seconds than book a call
             that goes nowhere.
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="mt-14 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <Reveal delayMs={80}>
-            <div className="h-full rounded-2xl border border-border bg-ink-card p-7">
-              <div className="flex items-center gap-2">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-dim text-amber">
+            <div className="h-full rounded-2xl border border-neutral-300 bg-neutral-50/80 p-8 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-700">
                   <svg
                     viewBox="0 0 16 16"
                     fill="none"
-                    className="h-3.5 w-3.5"
+                    className="h-4 w-4"
                     aria-hidden="true"
                   >
                     <path
                       d="M3 8.5l3 3 7-7"
                       stroke="currentColor"
-                      strokeWidth="1.8"
+                      strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                   </svg>
                 </span>
-                <h3 className="text-[15px] font-semibold text-text">
+                <h3 className="text-[17px] font-bold text-neutral-950">
                   Good fit
                 </h3>
               </div>
-              <ul className="mt-5 space-y-3.5">
+              <ul className="mt-6 space-y-4">
                 {GOOD_FIT.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 text-[14.5px] leading-relaxed text-text-muted"
+                    className="flex gap-3 text-[14.5px] leading-relaxed text-neutral-700"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-600" />
                     {item}
                   </li>
                 ))}
@@ -69,34 +69,34 @@ export default function WhoThisIsFor() {
           </Reveal>
 
           <Reveal delayMs={160}>
-            <div className="h-full rounded-2xl border border-border bg-ink-raised p-7">
-              <div className="flex items-center gap-2">
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/[0.06] text-text-faint">
+            <div className="h-full rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm">
+              <div className="flex items-center gap-3">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-neutral-100 text-neutral-500">
                   <svg
                     viewBox="0 0 16 16"
                     fill="none"
-                    className="h-3.5 w-3.5"
+                    className="h-4 w-4"
                     aria-hidden="true"
                   >
                     <path
                       d="M4 4l8 8M12 4l-8 8"
                       stroke="currentColor"
-                      strokeWidth="1.8"
+                      strokeWidth="2"
                       strokeLinecap="round"
                     />
                   </svg>
                 </span>
-                <h3 className="text-[15px] font-semibold text-text">
+                <h3 className="text-[17px] font-bold text-neutral-700">
                   Not a fit
                 </h3>
               </div>
-              <ul className="mt-5 space-y-3.5">
+              <ul className="mt-6 space-y-4">
                 {NOT_A_FIT.map((item) => (
                   <li
                     key={item}
-                    className="flex gap-3 text-[14.5px] leading-relaxed text-text-muted"
+                    className="flex gap-3 text-[14.5px] leading-relaxed text-neutral-500"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/20" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-300" />
                     {item}
                   </li>
                 ))}

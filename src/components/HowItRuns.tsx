@@ -2,27 +2,27 @@ import Reveal from "./Reveal";
 
 const STEPS = [
   {
-    n: "1",
+    n: "01",
     title: "Brief",
     desc: "We learn your stack, your clients, and where leads are currently leaking.",
   },
   {
-    n: "2",
+    n: "02",
     title: "Scope",
     desc: "A fixed-scope plan for the first build, priced against the tier it fits.",
   },
   {
-    n: "3",
+    n: "03",
     title: "Build",
     desc: "Work happens inside your CRM and tools, under your brand throughout.",
   },
   {
-    n: "4",
+    n: "04",
     title: "QA",
     desc: "Every workflow is tested against real edge cases before it reaches a client.",
   },
   {
-    n: "5",
+    n: "05",
     title: "Handover",
     desc: "You get documentation and a working system you own — not a black box.",
   },
@@ -30,13 +30,13 @@ const STEPS = [
 
 export default function HowItRuns() {
   return (
-    <section className="border-b border-border/60 py-24 sm:py-32">
+    <section className="bg-[#f8f9fa] text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-medium uppercase tracking-wider text-amber">
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
             How an engagement runs
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             Five steps. The same ones, every time.
           </h2>
         </Reveal>
@@ -44,14 +44,14 @@ export default function HowItRuns() {
         <ol className="mt-14 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {STEPS.map((step, i) => (
             <Reveal key={step.n} delayMs={i * 90} as="li">
-              <div className="h-full rounded-2xl border border-border bg-ink-card p-6">
-                <span className="font-mono text-[13px] text-text-faint">
+              <div className="h-full rounded-2xl border border-neutral-200 bg-white p-7 shadow-sm hover:border-neutral-300 transition-colors">
+                <span className="font-mono text-[12px] font-bold text-neutral-400">
                   {step.n}
                 </span>
-                <h3 className="mt-3 text-[15.5px] font-semibold text-text">
+                <h3 className="mt-3 text-[16px] font-bold text-neutral-950">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-[14px] leading-relaxed text-text-muted">
+                <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">
                   {step.desc}
                 </p>
               </div>

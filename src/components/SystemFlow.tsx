@@ -65,16 +65,16 @@ export default function SystemFlow() {
   }, []);
 
   return (
-    <section id="system" className="border-b border-border/60 py-24 sm:py-32">
+    <section id="system" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-[13px] font-medium uppercase tracking-wider text-amber">
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
             The system
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             One connected system, not six disconnected tools.
           </h2>
-          <p className="mt-4 text-[16px] leading-relaxed text-text-muted">
+          <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-neutral-600">
             This is what gets built behind the scenes of every engagement —
             the same sequence, every time, so a lead can never quietly
             disappear between steps.
@@ -83,9 +83,9 @@ export default function SystemFlow() {
 
         <div ref={containerRef} className="relative mt-16">
           {/* connecting line — desktop */}
-          <div className="absolute left-0 right-0 top-6 hidden h-px bg-border-strong lg:block">
+          <div className="absolute left-0 right-0 top-6 hidden h-px bg-neutral-200 lg:block">
             <div
-              className={`line-draw h-full bg-amber ${isVisible ? "is-visible" : ""}`}
+              className={`line-draw h-full bg-neutral-900 ${isVisible ? "is-visible" : ""}`}
               style={{ transitionDelay: "150ms" }}
             />
           </div>
@@ -95,9 +95,9 @@ export default function SystemFlow() {
               <li key={step.n} className="relative">
                 {/* connecting line — mobile/tablet */}
                 {i > 0 && (
-                  <div className="absolute -top-6 left-6 h-6 w-px bg-border-strong sm:hidden">
+                  <div className="absolute -top-6 left-6 h-6 w-px bg-neutral-200 sm:hidden">
                     <div
-                      className={`line-draw-v h-full bg-amber ${isVisible ? "is-visible" : ""}`}
+                      className={`line-draw-v h-full bg-neutral-900 ${isVisible ? "is-visible" : ""}`}
                       style={{ transitionDelay: `${150 + i * 120}ms` }}
                     />
                   </div>
@@ -107,13 +107,13 @@ export default function SystemFlow() {
                   className={`reveal ${isVisible ? "is-visible" : ""}`}
                   style={{ transitionDelay: `${150 + i * 120}ms` }}
                 >
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-border-strong bg-ink-card text-[13px] font-semibold text-amber lg:bg-ink">
+                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border border-neutral-300 bg-white text-[13px] font-bold text-neutral-900 shadow-sm">
                     {step.n}
                   </div>
-                  <h3 className="mt-4 text-[16px] font-semibold text-text">
+                  <h3 className="mt-4 text-[16px] font-bold text-neutral-950">
                     {step.title}
                   </h3>
-                  <p className="mt-2 text-[14px] leading-relaxed text-text-muted">
+                  <p className="mt-2 text-[14px] leading-relaxed text-neutral-600">
                     {step.desc}
                   </p>
                 </div>

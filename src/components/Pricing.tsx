@@ -78,62 +78,61 @@ const spotsLeft = Math.max(
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="border-b border-border/60 py-24 sm:py-32">
+    <section id="pricing" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-medium uppercase tracking-wider text-amber">
+          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
             Pricing
           </p>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             Four ways to work together.
           </h2>
-          <p className="mt-4 text-[16px] leading-relaxed text-text-muted">
+          <p className="mt-4 text-[16px] sm:text-[18px] leading-relaxed text-neutral-600">
             Transparent monthly pricing. No hourly rate — you&apos;re paying
             for a managed system, not a timesheet.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid grid-cols-1 gap-5 lg:grid-cols-4">
+        <div className="mt-14 grid grid-cols-1 gap-6 lg:grid-cols-4">
           {TIERS.map((tier, i) => (
             <Reveal key={tier.id} delayMs={i * 80}>
               <div
-                className={`flex h-full flex-col rounded-2xl border p-7 ${
+                className={`flex h-full flex-col rounded-2xl border p-7 transition-all ${
                   tier.highlight
-                    ? "border-amber/50 bg-ink-card shadow-[0_0_0_1px_rgba(228,158,33,0.15),0_24px_60px_-30px_rgba(228,158,33,0.35)]"
-                    : "border-border bg-ink-card"
+                    ? "border-neutral-950 bg-neutral-50 shadow-xl ring-1 ring-neutral-950"
+                    : "border-neutral-200 bg-white shadow-sm hover:border-neutral-300"
                 }`}
               >
                 {tier.highlight && (
-                  <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-amber-dim px-2.5 py-1 text-[11.5px] font-medium text-amber">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber" />
-                    {spotsLeft} of {FOUNDING_ACCESS_TOTAL_SPOTS} spots
-                    available
+                  <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-2.5 py-1 text-[11.5px] font-semibold text-amber-800">
+                    <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
+                    {spotsLeft} of {FOUNDING_ACCESS_TOTAL_SPOTS} spots available
                   </span>
                 )}
 
-                <h3 className="text-[15px] font-semibold text-text">
+                <h3 className="text-[16px] font-bold text-neutral-950">
                   {tier.name}
                 </h3>
-                <p className="mt-2 text-[13.5px] leading-relaxed text-text-muted">
+                <p className="mt-2 text-[13.5px] leading-relaxed text-neutral-600">
                   {tier.desc}
                 </p>
 
                 <div className="mt-6">
-                  <span className="text-3xl font-semibold tracking-tight text-text">
+                  <span className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-950 font-sans">
                     {tier.price}
                   </span>
-                  <p className="mt-1 text-[13px] text-text-faint">
+                  <p className="mt-1 text-[13px] text-neutral-500">
                     {tier.priceNote}
                   </p>
                 </div>
 
-                <ul className="mt-6 flex-1 space-y-2.5">
+                <ul className="mt-6 flex-1 space-y-3">
                   {tier.features.map((f) => (
                     <li
                       key={f}
-                      className="flex gap-2.5 text-[13.5px] leading-relaxed text-text-muted"
+                      className="flex gap-2.5 text-[13.5px] leading-relaxed text-neutral-600"
                     >
-                      <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-text-faint" />
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
                       {f}
                     </li>
                   ))}
@@ -141,10 +140,10 @@ export default function Pricing() {
 
                 <a
                   href={BOOK_A_CALL_HREF}
-                  className={`mt-7 inline-flex h-10 items-center justify-center rounded-full px-5 text-[13.5px] font-medium transition-colors ${
+                  className={`mt-8 inline-flex h-11 items-center justify-center rounded-lg px-5 text-[13.5px] font-semibold transition-all ${
                     tier.highlight
-                      ? "bg-amber text-ink hover:bg-amber-bright"
-                      : "border border-border-strong bg-transparent text-text hover:border-white/25"
+                      ? "bg-black text-white hover:bg-neutral-800 shadow-md"
+                      : "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-100"
                   }`}
                 >
                   {tier.cta}
