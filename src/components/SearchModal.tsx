@@ -9,18 +9,22 @@ interface SearchModalProps {
 }
 
 const SEARCH_ITEMS = [
-  { title: "SaqrFlow Reliability", category: "Application", href: "#software" },
+  { title: "The 6-Step System Flow (Capture, CRM, Routing, Follow-up)", category: "Core System", href: "#system" },
+  { title: "WhatsApp Lead Qualifier Proof (Graceful degradation)", category: "Live Proof", href: "#proof" },
+  { title: "Pricing: Four Ways To Work Together (£300 - £2,500)", category: "Pricing", href: "#pricing" },
+  { title: "Founding Partner Access (Spots Available)", category: "Pricing", href: "#pricing" },
+  { title: "Who This Is For (Good Fit vs Not a Fit)", category: "Fit Criteria", href: "#fit" },
+  { title: "How An Engagement Runs (5 Steps)", category: "Process", href: "#fit" },
   { title: "SaqrFlow Agentic AI Platform", category: "Platform", href: "#software" },
-  { title: "Production Schedule Optimization", category: "Application", href: "#software" },
-  { title: "SaqrFlow Demand Planning", category: "Application", href: "#software" },
+  { title: "SaqrFlow AI Studio (Connectors & Pipelines)", category: "Platform", href: "#software" },
+  { title: "SaqrFlow Code (Autonomous App Synthesis)", category: "Platform", href: "#software" },
+  { title: "Enterprise AI Applications (40+ Turnkey Apps)", category: "Applications", href: "#software" },
   { title: "Defense & Intelligence Sector", category: "Industry", href: "#industries" },
   { title: "Maritime & Naval Operations", category: "Industry", href: "#industries" },
-  { title: "Manufacturing Process Optimization", category: "Industry", href: "#industries" },
-  { title: "Dow Enterprise Case Study", category: "Customer Story", href: "#stories" },
+  { title: "Manufacturing Process & Yield Optimization", category: "Industry", href: "#industries" },
+  { title: "Dow Chemical Enterprise Case Study", category: "Customer Story", href: "#stories" },
   { title: "Holcim Global Net-Zero Case Study", category: "Customer Story", href: "#stories" },
   { title: "Baker Hughes Turbomachinery Telemetry", category: "Customer Story", href: "#stories" },
-  { title: "SaqrFlow Code Autonomous Synthesis", category: "Platform", href: "#software" },
-  { title: "Enterprise RAG & Grounded Reasoning", category: "Platform", href: "#software" },
 ];
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
@@ -50,11 +54,12 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   if (!isOpen) return null;
 
   const filtered = query.trim()
-    ? SEARCH_ITEMS.filter((item) =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.category.toLowerCase().includes(query.toLowerCase())
+    ? SEARCH_ITEMS.filter(
+        (item) =>
+          item.title.toLowerCase().includes(query.toLowerCase()) ||
+          item.category.toLowerCase().includes(query.toLowerCase())
       )
-    : SEARCH_ITEMS.slice(0, 6);
+    : SEARCH_ITEMS.slice(0, 8);
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 pt-20 bg-black/80 backdrop-blur-sm animate-in fade-in duration-150">
@@ -70,7 +75,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search products, industries, case studies, or documentation..."
+            placeholder="Search system flow, proof, pricing, products, or industries..."
             className="w-full bg-transparent text-base text-white placeholder-neutral-500 focus:outline-none"
           />
           <button
@@ -90,7 +95,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
           {filtered.length === 0 ? (
             <p className="p-4 text-sm text-neutral-500 text-center">
-              No matching enterprise resources found.
+              No matching resources found.
             </p>
           ) : (
             filtered.map((item, idx) => (
@@ -106,7 +111,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     {item.title}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-neutral-500 border border-white/10 px-2 py-0.5 rounded group-hover:border-cyan-500/40 group-hover:text-cyan-300">
+                <span className="text-xs font-mono text-neutral-400 border border-white/10 px-2 py-0.5 rounded group-hover:border-cyan-500/40 group-hover:text-cyan-300">
                   {item.category}
                 </span>
               </Link>
