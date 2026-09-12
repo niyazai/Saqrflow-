@@ -7,7 +7,6 @@ import AcceleratorPromo from "@/components/AcceleratorPromo";
 import SystemFlow from "@/components/SystemFlow";
 import Proof from "@/components/Proof";
 import IndustryCarousel from "@/components/IndustryCarousel";
-import SoftwareSuite from "@/components/SoftwareSuite";
 import CustomerStories from "@/components/CustomerStories";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import HowItRuns from "@/components/HowItRuns";
@@ -44,9 +43,6 @@ export default function Home() {
 
         {/* DARK SECTION: Built for Your Industry Carousel */}
         <IndustryCarousel onOpenDemo={() => setDemoOpen(true)} />
-
-        {/* WHITE SECTION: Our Software Suite */}
-        <SoftwareSuite onOpenDemo={() => setDemoOpen(true)} />
 
         {/* DARK SECTION: Customer Stories */}
         <CustomerStories onOpenDemo={() => setDemoOpen(true)} />

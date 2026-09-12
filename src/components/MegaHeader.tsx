@@ -133,10 +133,18 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
 
               {/* Pricing */}
               <Link
-                href="#pricing"
+                href="/#pricing"
                 className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
               >
                 Pricing
+              </Link>
+
+              {/* Team & Portfolios */}
+              <Link
+                href="/team"
+                className="px-3.5 py-2 text-[14px] font-medium text-neutral-300 hover:text-white transition-colors"
+              >
+                Team
               </Link>
 
               {/* Company */}
@@ -461,11 +469,12 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                       {[
-                        { title: "Who This Is For", href: "#fit" },
-                        { title: "How An Engagement Runs", href: "#fit" },
-                        { title: "Pricing & Founding Access", href: "#pricing" },
-                        { title: "Customer Case Studies", href: "#stories" },
-                        { title: "The 6-Step System", href: "#system" },
+                        { title: "Team & Portfolios", href: "/team" },
+                        { title: "Who This Is For", href: "/#fit" },
+                        { title: "How An Engagement Runs", href: "/#fit" },
+                        { title: "Pricing & Founding Access", href: "/#pricing" },
+                        { title: "Customer Case Studies", href: "/#stories" },
+                        { title: "The 6-Step System", href: "/#system" },
                         { title: "Book a Strategy Call", href: BOOK_A_CALL_HREF },
                       ].map((item, idx) => (
                         <Link
@@ -532,34 +541,41 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               </div>
 
               {/* Direct Quick Nav Links */}
-              <div className="grid grid-cols-2 gap-2 pb-4 border-b border-white/10">
+              <div className="grid grid-cols-3 gap-2 pb-4 border-b border-white/10">
                 <Link
-                  href="#system"
+                  href="/#system"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-neutral-200"
+                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
                 >
                   The System
                 </Link>
                 <Link
-                  href="#proof"
+                  href="/#proof"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-neutral-200"
+                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
                 >
                   Proof
                 </Link>
                 <Link
-                  href="#pricing"
+                  href="/#pricing"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-white"
+                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-white"
                 >
                   Pricing
                 </Link>
                 <Link
-                  href="#fit"
+                  href="/team"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-neutral-200"
+                  className="p-2.5 rounded bg-white/10 text-center text-xs font-semibold text-white col-span-2"
                 >
-                  Who It&apos;s For
+                  Team & Portfolios →
+                </Link>
+                <Link
+                  href="/#fit"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2.5 rounded bg-white/5 text-center text-xs font-medium text-neutral-200"
+                >
+                  Fit Criteria
                 </Link>
               </div>
 
@@ -567,35 +583,34 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               {[
                 {
                   id: "products",
-                  title: "Products & Software",
+                  title: "Products & Systems",
                   items: [
-                    { label: "The 6-Step System", href: "#system" },
-                    { label: "WhatsApp Qualifier Proof", href: "#proof" },
-                    { label: "Operating Platform", href: "#software" },
-                    { label: "SaqrFlow Studio", href: "#software" },
-                    { label: "SaqrFlow Code", href: "#software" },
-                    { label: "Enterprise Applications", href: "#software" },
+                    { label: "The 6-Step System", href: "/#system" },
+                    { label: "WhatsApp Qualifier Proof", href: "/#proof" },
+                    { label: "Engineering Team & Portfolios", href: "/team" },
+                    { label: "Client Inbound Architecture", href: "/#system" },
                   ],
                 },
                 {
                   id: "industries",
                   title: "Industries & Sectors",
                   items: [
-                    { label: "Marketing & Lead Gen Agencies", href: "#fit" },
-                    { label: "Defense & Intelligence", href: "#industries" },
-                    { label: "Maritime", href: "#industries" },
-                    { label: "Manufacturing", href: "#industries" },
-                    { label: "Oil & Gas", href: "#industries" },
-                    { label: "Utilities", href: "#industries" },
+                    { label: "Marketing & Lead Gen Agencies", href: "/#fit" },
+                    { label: "Defense & Intelligence", href: "/#industries" },
+                    { label: "Maritime", href: "/#industries" },
+                    { label: "Manufacturing", href: "/#industries" },
+                    { label: "Oil & Gas", href: "/#industries" },
+                    { label: "Utilities", href: "/#industries" },
                   ],
                 },
                 {
                   id: "company",
                   title: "Company & Pricing",
                   items: [
-                    { label: "Four Ways To Work Together (Pricing)", href: "#pricing" },
-                    { label: "Who This Is For (Fit Criteria)", href: "#fit" },
-                    { label: "Customer Stories", href: "#stories" },
+                    { label: "Team & Portfolios", href: "/team" },
+                    { label: "Four Ways To Work Together (Pricing)", href: "/#pricing" },
+                    { label: "Who This Is For (Fit Criteria)", href: "/#fit" },
+                    { label: "Customer Stories", href: "/#stories" },
                     { label: "Book a Call", href: BOOK_A_CALL_HREF },
                   ],
                 },

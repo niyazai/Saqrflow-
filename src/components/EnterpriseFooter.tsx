@@ -79,18 +79,18 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
           {/* Column 3: Platform & Industries */}
           <div className="lg:col-span-2">
             <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
-              Platform
+              Architecture & Team
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400 mb-8">
               {[
-                "SaqrFlow Studio",
-                "SaqrFlow Code",
-                "Connected Pipelines",
-                "Operating Runtime",
+                { name: "Engineering Team", href: "/team" },
+                { name: "Portfolio Systems", href: "/team" },
+                { name: "The 6-Step Flow", href: "/#system" },
+                { name: "WhatsApp Qualifier", href: "/#proof" },
               ].map((item, i) => (
                 <li key={i}>
-                  <Link href="#software" className="hover:text-white transition-colors block py-0.5">
-                    {item}
+                  <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -110,7 +110,7 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
                 "Healthcare",
               ].map((item, i) => (
                 <li key={i}>
-                  <Link href="#industries" className="hover:text-white transition-colors block py-0.5">
+                  <Link href="/#industries" className="hover:text-white transition-colors block py-0.5">
                     {item}
                   </Link>
                 </li>
@@ -125,13 +125,13 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                { name: "Paid Proof (£300)", href: "#pricing" },
-                { name: "Founding Access (£1,000/mo)", href: "#pricing" },
-                { name: "Standard (£1,500/mo)", href: "#pricing" },
-                { name: "Advanced (£2,500/mo)", href: "#pricing" },
-                { name: "Good Fit vs Not a Fit", href: "#fit" },
-                { name: "How It Runs (5 Steps)", href: "#fit" },
-                { name: "Customer Stories", href: "#stories" },
+                { name: "Paid Proof (£300)", href: "/#pricing" },
+                { name: "Founding Access (£1,000/mo)", href: "/#pricing" },
+                { name: "Standard (£1,500/mo)", href: "/#pricing" },
+                { name: "Advanced (£2,500/mo)", href: "/#pricing" },
+                { name: "Good Fit vs Not a Fit", href: "/#fit" },
+                { name: "How It Runs (5 Steps)", href: "/#fit" },
+                { name: "Customer Stories", href: "/#stories" },
               ].map((item, i) => (
                 <li key={i}>
                   <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
@@ -149,15 +149,15 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                "About SaqrFlow",
-                "Agency Partner Network",
-                "Security & Compliance",
-                "Contact",
-                "Careers",
+                { name: "Team & Portfolios", href: "/team" },
+                { name: "Agency Partner Network", href: "/team" },
+                { name: "Customer Stories", href: "/#stories" },
+                { name: "Fit & Criteria", href: "/#fit" },
+                { name: "Book Strategy Call", href: BOOK_A_CALL_HREF },
               ].map((item, i) => (
                 <li key={i}>
-                  <Link href="#stories" className="hover:text-white transition-colors block py-0.5">
-                    {item}
+                  <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
+                    {item.name}
                   </Link>
                 </li>
               ))}
