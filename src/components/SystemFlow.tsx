@@ -68,8 +68,8 @@ export default function SystemFlow() {
     <section id="system" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
-          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
-            The system
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+            THE 6-STEP PIPELINE
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             One connected system, not six disconnected tools.

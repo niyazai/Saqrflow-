@@ -81,8 +81,8 @@ export default function Pricing() {
     <section id="pricing" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
-            Pricing
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+            PRICING ARCHITECTURE
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             Four ways to work together.
@@ -104,8 +104,8 @@ export default function Pricing() {
                 }`}
               >
                 {tier.highlight && (
-                  <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-2.5 py-1 text-[11.5px] font-semibold text-amber-800">
-                    <span className="h-1.5 w-1.5 rounded-full bg-amber-600" />
+                  <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-md bg-neutral-100 border border-neutral-300 px-2.5 py-1 text-[11.5px] font-mono font-semibold text-neutral-800">
+                    <span className="h-1.5 w-1.5 rounded-full bg-neutral-900" />
                     {spotsLeft} of {FOUNDING_ACCESS_TOTAL_SPOTS} spots available
                   </span>
                 )}
@@ -140,7 +140,7 @@ export default function Pricing() {
 
                 <a
                   href={BOOK_A_CALL_HREF}
-                  className={`mt-8 inline-flex h-11 items-center justify-center rounded-lg px-5 text-[13.5px] font-semibold transition-all ${
+                  className={`mt-8 inline-flex h-11 items-center justify-center rounded-md px-5 text-[13.5px] font-semibold transition-all ${
                     tier.highlight
                       ? "bg-black text-white hover:bg-neutral-800 shadow-md"
                       : "border border-neutral-300 bg-white text-neutral-900 hover:bg-neutral-100"

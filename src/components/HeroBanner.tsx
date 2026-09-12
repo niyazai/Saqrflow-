@@ -50,7 +50,7 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
         <div className="mt-10 lg:mt-14 flex flex-wrap items-center gap-4">
           <a
             href={BOOK_A_CALL_HREF}
-            className="group inline-flex items-center justify-center gap-3 h-14 px-8 text-base font-semibold text-black bg-white rounded transition-all hover:bg-neutral-200 hover:shadow-xl hover:shadow-white/10"
+            className="group inline-flex items-center justify-center gap-3 h-14 px-8 text-base font-semibold text-black bg-white rounded-md transition-all hover:bg-neutral-200 hover:shadow-xl hover:shadow-white/10"
           >
             <span>Book a Call</span>
             <svg
@@ -70,18 +70,18 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
           </a>
 
           <a
-            href="#system"
-            className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded transition-all"
+            href="/#system"
+            className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded-md transition-all"
           >
             <span>Explore The System</span>
             <span className="text-neutral-400 font-mono">↓</span>
           </a>
 
           <a
-            href="#pricing"
-            className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-transparent hover:bg-white/5 border border-white/15 rounded transition-all"
+            href="/team"
+            className="inline-flex items-center justify-center gap-2 h-14 px-7 text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded-md transition-all"
           >
-            <span>View Pricing</span>
+            <span>Meet The Team</span>
             <span className="text-neutral-400 font-mono">→</span>
           </a>
         </div>

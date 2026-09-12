@@ -228,7 +228,7 @@ export default function CustomerStories({ onOpenDemo }: CustomerStoriesProps) {
                             <button
                               type="button"
                               onClick={onOpenDemo}
-                              className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all shadow-lg"
+                              className="group inline-flex items-center gap-2.5 px-6 py-3.5 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all shadow-lg"
                             >
                               <span>{story.ctaText}</span>
                               <svg

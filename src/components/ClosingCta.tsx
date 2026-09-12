@@ -1,31 +1,72 @@
+import Link from "next/link";
 import { BOOK_A_CALL_HREF } from "@/lib/content";
 import Reveal from "./Reveal";
 
 export default function ClosingCta() {
   return (
-    <section className="relative overflow-hidden border-b border-border/60 py-24 sm:py-32">
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[720px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(closest-side, rgba(228,158,33,0.35), transparent)",
-        }}
-      />
-      <div className="relative mx-auto max-w-2xl px-6 text-center">
+    <section className="relative overflow-hidden bg-[#07090d] text-white border-t border-b border-white/10 py-24 sm:py-32">
+      {/* Subtle enterprise grid texture */}
+      <div className="absolute inset-0 c3-grid-pattern opacity-20 pointer-events-none" />
+
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
         <Reveal>
-          <h2 className="text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-md border border-white/10 bg-white/[0.04] text-xs font-mono tracking-widest uppercase text-neutral-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-white/70" />
+            DIRECT ARCHITECTURAL CONSULTATION
+          </div>
+
+          <h2 className="text-balance text-3xl font-bold tracking-tight text-white sm:text-5xl font-sans leading-tight">
             Stop leads falling through the cracks between your tools.
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-[16px] leading-relaxed text-text-muted">
-            One call to see if it&apos;s a fit — no deck, no pressure.
+
+          <p className="mx-auto mt-5 max-w-xl text-base sm:text-lg leading-relaxed text-neutral-400">
+            One architectural briefing to assess your lead flows, CRM connectivity, and workflow bottlenecks — no sales deck, no pressure.
           </p>
-          <div className="mt-8 flex items-center justify-center">
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href={BOOK_A_CALL_HREF}
-              className="inline-flex h-11 items-center rounded-full bg-amber px-6 text-[14.5px] font-medium text-ink shadow-[0_0_0_1px_rgba(228,158,33,0.3),0_8px_24px_-8px_rgba(228,158,33,0.6)] transition-colors hover:bg-amber-bright"
+              className="group inline-flex items-center justify-center gap-2.5 h-12 px-7 text-sm sm:text-base font-semibold text-black bg-white rounded-md transition-all hover:bg-neutral-200 hover:shadow-xl hover:shadow-white/10"
             >
-              Book a call
+              <span>Book a Call</span>
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.5 11.5L11.5 1.5M11.5 1.5H4.5M11.5 1.5V8.5"
+                  stroke="currentColor"
+                  strokeWidth="1.75"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
             </a>
+
+            <Link
+              href="/team"
+              className="inline-flex items-center justify-center gap-2 h-12 px-6 text-sm sm:text-base font-medium text-neutral-200 bg-white/5 hover:bg-white/10 border border-white/15 rounded-md transition-all"
+            >
+              <span>Explore Team & Portfolios</span>
+              <span className="text-neutral-400 font-mono">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-xs font-mono text-neutral-500">
+            <span className="flex items-center gap-1.5">
+              <span className="text-neutral-300">✓</span>
+              <span>Direct access to systems architects</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-neutral-300">✓</span>
+              <span>100% white-label agency delivery</span>
+            </span>
+            <span className="flex items-center gap-1.5">
+              <span className="text-neutral-300">✓</span>
+              <span>Transparent tiered pricing</span>
+            </span>
           </div>
         </Reveal>
       </div>

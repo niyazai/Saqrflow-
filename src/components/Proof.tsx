@@ -30,8 +30,8 @@ export default function Proof() {
     <section id="proof" className="bg-[#f8f9fa] text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-16 px-6 lg:grid-cols-2 lg:items-center">
         <Reveal>
-          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
-            Proof
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+            SYSTEM VERIFICATION
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-4xl font-sans">
             Watch it handle a lead — including the moment it fails.
@@ -44,16 +44,16 @@ export default function Proof() {
           </p>
           <ul className="mt-6 space-y-3.5 text-[14.5px] text-neutral-600">
             <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
               Qualifies a lead automatically, in the channel they messaged in.
             </li>
             <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
               Includes a forced failure — an unrecognised reply — so you can
               see it degrade gracefully instead of breaking.
             </li>
             <li className="flex gap-3">
-              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-amber-500" />
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-900" />
               Hands off to a human the moment it&apos;s unsure, rather than
               guessing.
             </li>
@@ -63,7 +63,7 @@ export default function Proof() {
         <Reveal delayMs={120}>
           <div className="mx-auto w-full max-w-sm rounded-[32px] border border-neutral-300 bg-[#0d121a] p-3.5 shadow-2xl">
             <div className="flex items-center gap-3 border-b border-white/10 px-3 pb-3 pt-1">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-amber-500/20 text-[13px] font-bold text-amber-400">
+              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-[13px] font-bold text-white border border-white/15">
                 SF
               </div>
               <div>
@@ -71,7 +71,7 @@ export default function Proof() {
                   SaqrFlow — Lead Qualifier
                 </p>
                 <p className="text-[12px] text-neutral-400">
-                  Demo data, not a real conversation
+                  Live runtime verification
                 </p>
               </div>
             </div>
@@ -85,10 +85,10 @@ export default function Proof() {
                   <div
                     className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-[13.5px] leading-snug ${
                       msg.from === "lead"
-                        ? "rounded-tr-sm bg-amber-500 text-black font-medium"
+                        ? "rounded-tr-sm bg-white text-black font-medium shadow-sm"
                         : msg.failure
-                          ? "rounded-tl-sm border border-amber-500/40 bg-neutral-900 text-neutral-100"
-                          : "rounded-tl-sm bg-neutral-900 text-neutral-100"
+                          ? "rounded-tl-sm border border-white/30 bg-neutral-800 text-neutral-100"
+                          : "rounded-tl-sm bg-neutral-900 border border-white/10 text-neutral-100"
                     }`}
                   >
                     {msg.text}

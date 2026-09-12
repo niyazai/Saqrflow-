@@ -21,8 +21,8 @@ export default function WhoThisIsFor() {
     <section id="fit" className="bg-white text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
-            Who this is for
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+            FIT CRITERIA
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             We&apos;d rather you self-select in five seconds than book a call

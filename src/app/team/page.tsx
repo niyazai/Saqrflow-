@@ -297,13 +297,13 @@ export default function TeamPage() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href={BOOK_A_CALL_HREF}
-                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide text-white bg-black rounded-lg hover:bg-neutral-800 transition-colors shadow-md"
+                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide text-white bg-black rounded-md hover:bg-neutral-800 transition-colors shadow-md"
                   >
                     Contact Team Leadership →
                   </a>
                   <Link
                     href="/"
-                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide text-neutral-800 bg-neutral-100 rounded-lg hover:bg-neutral-200 transition-colors border border-neutral-300"
+                    className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wide text-neutral-800 bg-neutral-100 rounded-md hover:bg-neutral-200 transition-colors border border-neutral-300"
                   >
                     Explore SaqrFlow Architecture
                   </Link>

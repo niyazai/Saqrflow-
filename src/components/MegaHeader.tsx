@@ -205,7 +205,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
             {/* Book a Call CTA */}
             <a
               href={BOOK_A_CALL_HREF}
-              className="inline-flex items-center justify-center gap-1.5 h-10 px-5 text-[13.5px] font-semibold tracking-wide text-black bg-white rounded transition-all hover:bg-neutral-200 hover:shadow-lg hover:shadow-white/10"
+              className="inline-flex items-center justify-center gap-1.5 h-10 px-5 text-[13.5px] font-semibold tracking-wide text-black bg-white rounded-md transition-all hover:bg-neutral-200 hover:shadow-lg hover:shadow-white/10"
             >
               <span>Book a Call</span>
               <svg
@@ -655,7 +655,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
             <div className="pt-8 pb-6 border-t border-white/10">
               <a
                 href={BOOK_A_CALL_HREF}
-                className="w-full flex items-center justify-center gap-2 h-12 rounded bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors"
+                className="w-full flex items-center justify-center gap-2 h-12 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-colors"
               >
                 <span>Book a Call</span>
                 <span>↗</span>

@@ -33,8 +33,8 @@ export default function HowItRuns() {
     <section className="bg-[#f8f9fa] text-neutral-900 border-b border-neutral-200 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl px-6">
         <Reveal className="max-w-2xl">
-          <p className="text-[13px] font-semibold uppercase tracking-wider text-amber-600">
-            How an engagement runs
+          <p className="text-xs font-mono font-semibold uppercase tracking-widest text-neutral-500">
+            ENGAGEMENT WORKFLOW
           </p>
           <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-neutral-950 sm:text-5xl font-sans">
             Five steps. The same ones, every time.

@@ -31,7 +31,7 @@ export default function AcceleratorPromo({ onOpenDemo }: AcceleratorPromoProps) 
             <div className="flex items-center gap-6 self-start lg:self-center shrink-0">
               <a
                 href={BOOK_A_CALL_HREF}
-                className="group inline-flex items-center gap-3 px-6 py-3.5 rounded bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all shadow-lg"
+                className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-md bg-white text-black font-semibold text-sm hover:bg-neutral-200 transition-all shadow-lg"
               >
                 <span>Request a Seat</span>
                 <svg
