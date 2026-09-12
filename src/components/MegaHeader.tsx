@@ -39,10 +39,10 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
         onMouseLeave={() => setActiveMenu(null)}
       >
         <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between px-6 lg:px-12">
-          {/* Brand Logo */}
+          {/* Brand Logo - Pure Clean SaqrFlow without any AI badge */}
           <div className="flex items-center gap-8 xl:gap-10">
             <Link href="/" className="flex items-center gap-3 group">
-              <div className="relative flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/20 p-1 group-hover:border-cyan-400/50 transition-colors">
+              <div className="relative flex items-center justify-center w-8 h-8 rounded bg-white/5 border border-white/20 p-1 group-hover:border-white/40 transition-colors">
                 <Image
                   src="/brand/saqrflow-mark.png"
                   alt="SaqrFlow Logo"
@@ -52,14 +52,9 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                   className="w-auto h-auto max-h-6"
                 />
               </div>
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-[19px] font-bold tracking-tight text-white font-sans">
-                  SaqrFlow
-                </span>
-                <span className="text-[10px] font-mono tracking-widest text-cyan-400 font-semibold px-1.5 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/50">
-                  AI
-                </span>
-              </div>
+              <span className="text-[19px] font-bold tracking-tight text-white font-sans">
+                SaqrFlow
+              </span>
             </Link>
 
             {/* Desktop Navigation Links */}
@@ -144,7 +139,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                 Pricing
               </Link>
 
-              {/* Company / Who it's for */}
+              {/* Company */}
               <div
                 className="relative"
                 onMouseEnter={() => setActiveMenu("company")}
@@ -199,7 +194,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               </kbd>
             </button>
 
-            {/* Book a Call / Request a Demo CTA */}
+            {/* Book a Call CTA */}
             <a
               href={BOOK_A_CALL_HREF}
               className="inline-flex items-center justify-center gap-1.5 h-10 px-5 text-[13.5px] font-semibold tracking-wide text-black bg-white rounded transition-all hover:bg-neutral-200 hover:shadow-lg hover:shadow-white/10"
@@ -265,19 +260,19 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               {activeMenu === "products" && (
                 <div className="grid grid-cols-12 gap-8">
                   <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">
-                      Architecture & Fulfilment
+                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
+                      Architecture & Systems
                     </p>
                     <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
                       Products & Systems
                     </h3>
                     <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-                      A complete suite of AI applications, CRM workflows, and autonomous agents for agencies and enterprises.
+                      A complete suite of applications, CRM workflows, and automated pipelines for agencies and enterprises.
                     </p>
                     <Link
                       href="#system"
                       onClick={() => setActiveMenu(null)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-neutral-300 transition-colors"
                     >
                       <span>Explore The 6-Step System Flow</span>
                       <span>→</span>
@@ -318,9 +313,9 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                       <ul className="space-y-3">
                         {[
                           { title: "SaqrFlow Studio", desc: "Low-code application studio" },
-                          { title: "SaqrFlow Code", desc: "Autonomous agentic coding" },
-                          { title: "SaqrFlow Generative AI", desc: "Enterprise RAG & search" },
-                          { title: "Agentic AI Platform", desc: "Multi-agent runtime" },
+                          { title: "SaqrFlow Code", desc: "Autonomous application builder" },
+                          { title: "SaqrFlow Intelligence", desc: "Enterprise search & reasoning" },
+                          { title: "Operating Platform", desc: "Unified enterprise runtime" },
                         ].map((item, idx) => (
                           <li key={idx} className="group">
                             <Link
@@ -342,9 +337,9 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                   </div>
 
                   <div className="col-span-4 pl-6 border-l border-white/10">
-                    <div className="rounded-xl border border-white/10 bg-[#0d1117] p-5 hover:border-cyan-500/30 transition-all">
+                    <div className="rounded-xl border border-white/10 bg-[#0d1117] p-5 hover:border-white/20 transition-all">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-300 bg-white/5 px-2 py-0.5 rounded border border-white/10">
                           Lead Qualification Proof
                         </span>
                         <span className="text-xs text-neutral-400">Live Demo</span>
@@ -358,7 +353,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                       <Link
                         href="#proof"
                         onClick={() => setActiveMenu(null)}
-                        className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1"
+                        className="text-xs font-semibold text-white hover:text-neutral-300 inline-flex items-center gap-1"
                       >
                         <span>View Lead Qualifier Proof</span>
                         <span>›</span>
@@ -371,7 +366,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               {activeMenu === "industries" && (
                 <div className="grid grid-cols-12 gap-8">
                   <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">
+                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
                       Sectors
                     </p>
                     <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
@@ -383,7 +378,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                     <Link
                       href="#industries"
                       onClick={() => setActiveMenu(null)}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-cyan-300 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-neutral-300 transition-colors"
                     >
                       <span>View All Industries</span>
                       <span>→</span>
@@ -422,7 +417,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                   <div className="col-span-4 pl-6 border-l border-white/10">
                     <div className="rounded-xl border border-white/10 bg-[#0d1117] p-5">
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/40">
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-neutral-300 bg-white/5 px-2 py-0.5 rounded border border-white/10">
                           Partner Network
                         </span>
                         <span className="text-xs text-neutral-500">UK Agencies</span>
@@ -436,7 +431,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                       <Link
                         href="#fit"
                         onClick={() => setActiveMenu(null)}
-                        className="text-xs font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1"
+                        className="text-xs font-semibold text-white hover:text-neutral-300 inline-flex items-center gap-1"
                       >
                         <span>Check Fit Criteria</span>
                         <span>↗</span>
@@ -449,7 +444,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
               {activeMenu === "company" && (
                 <div className="grid grid-cols-12 gap-8">
                   <div className="col-span-3 border-r border-white/10 pr-6">
-                    <p className="text-xs font-mono uppercase tracking-widest text-cyan-400 mb-2">
+                    <p className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-2">
                       Enterprise Profile
                     </p>
                     <h3 className="text-2xl font-bold text-white tracking-tight mb-3">
@@ -489,8 +484,8 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                     <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-300 mb-4 pb-2 border-b border-white/10">
                       Pricing & Availability
                     </p>
-                    <div className="p-4 rounded-xl border border-amber/30 bg-amber-950/20 text-xs text-neutral-300 space-y-2">
-                      <p className="text-amber font-semibold text-sm">
+                    <div className="p-4 rounded-xl border border-white/15 bg-white/[0.03] text-xs text-neutral-300 space-y-2">
+                      <p className="text-white font-semibold text-sm">
                         Founding Access Available
                       </p>
                       <p className="text-neutral-400 leading-relaxed">
@@ -499,7 +494,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                       <Link
                         href="#pricing"
                         onClick={() => setActiveMenu(null)}
-                        className="inline-block text-white font-semibold hover:text-amber pt-1"
+                        className="inline-block text-white font-semibold hover:text-neutral-300 pt-1 underline underline-offset-4"
                       >
                         View 4 Pricing Tiers →
                       </Link>
@@ -555,7 +550,7 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                 <Link
                   href="#pricing"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-amber"
+                  className="p-2.5 rounded bg-white/5 text-center text-sm font-medium text-white"
                 >
                   Pricing
                 </Link>
@@ -576,10 +571,10 @@ export default function MegaHeader({ onOpenDemo, onOpenSearch }: MegaHeaderProps
                   items: [
                     { label: "The 6-Step System", href: "#system" },
                     { label: "WhatsApp Qualifier Proof", href: "#proof" },
-                    { label: "SaqrFlow Agentic Platform", href: "#software" },
+                    { label: "Operating Platform", href: "#software" },
                     { label: "SaqrFlow Studio", href: "#software" },
                     { label: "SaqrFlow Code", href: "#software" },
-                    { label: "Enterprise AI Applications", href: "#software" },
+                    { label: "Enterprise Applications", href: "#software" },
                   ],
                 },
                 {

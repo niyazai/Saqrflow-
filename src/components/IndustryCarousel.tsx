@@ -131,7 +131,7 @@ export default function IndustryCarousel({ onOpenDemo }: IndustryCarouselProps) 
         {/* Header row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start mb-12">
           <div className="lg:col-span-8">
-            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 block mb-3">
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
               Sector Specialization
             </span>
             <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-white font-sans">
@@ -174,9 +174,9 @@ export default function IndustryCarousel({ onOpenDemo }: IndustryCarouselProps) 
           <div className="absolute inset-0 c3-grid-pattern opacity-25 pointer-events-none" />
 
           {/* Telemetry Tag */}
-          <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 text-xs font-mono text-cyan-400/80 mb-8">
+          <div className="relative z-10 flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/10 text-xs font-mono text-neutral-400 mb-8">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-cyan-400" />
+              <span className="w-1.5 h-1.5 rounded-full bg-white/50" />
               <span>{current.telemetry}</span>
             </div>
             <div className="text-neutral-400">
@@ -233,10 +233,10 @@ export default function IndustryCarousel({ onOpenDemo }: IndustryCarouselProps) 
                     <button
                       type="button"
                       onClick={onOpenDemo}
-                      className="group w-full flex items-center justify-between text-left p-3.5 rounded-lg border border-white/5 hover:border-cyan-500/30 hover:bg-white/[0.03] transition-all"
+                      className="group w-full flex items-center justify-between text-left p-3.5 rounded-lg border border-white/5 hover:border-white/20 hover:bg-white/[0.03] transition-all"
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-cyan-400 font-mono text-base transition-transform group-hover:translate-x-1">
+                        <span className="text-neutral-400 group-hover:text-white font-mono text-base transition-transform group-hover:translate-x-1">
                           ›
                         </span>
                         <span className="text-sm sm:text-base font-medium text-neutral-200 group-hover:text-white">
@@ -244,7 +244,7 @@ export default function IndustryCarousel({ onOpenDemo }: IndustryCarouselProps) 
                         </span>
                       </div>
                       <svg
-                        className="w-4 h-4 text-neutral-500 group-hover:text-cyan-400 transition-colors shrink-0"
+                        className="w-4 h-4 text-neutral-500 group-hover:text-white transition-colors shrink-0"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"

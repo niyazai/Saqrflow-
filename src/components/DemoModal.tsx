@@ -13,7 +13,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
     name: "",
     email: "",
     company: "",
-    industry: "Defense & Intelligence",
+    industry: "Marketing & Lead Gen Agencies",
     message: "",
   });
 
@@ -23,7 +23,6 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
     e.preventDefault();
     setSubmitted(true);
     setTimeout(() => {
-      // Auto close after brief acknowledgment
       setTimeout(() => {
         setSubmitted(false);
         onClose();
@@ -48,7 +47,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
 
         {submitted ? (
           <div className="py-12 text-center">
-            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-cyan-950/80 border border-cyan-500/50 flex items-center justify-center text-cyan-400">
+            <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <polyline points="20 6 9 17 4 12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -57,21 +56,21 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               Request Received
             </h3>
             <p className="text-sm text-neutral-400 max-w-sm mx-auto">
-              Our enterprise architecture team will contact you within 4 hours to coordinate your technical briefing.
+              Our engineering team will contact you within 4 hours to coordinate your technical briefing.
             </p>
           </div>
         ) : (
           <>
             <div className="mb-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 uppercase tracking-widest mb-2">
-                <span className="w-2 h-2 rounded-full bg-cyan-400" />
-                ENTERPRISE ARCHITECTURAL BRIEFING
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-neutral-400 uppercase tracking-widest mb-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-white/60" />
+                TECHNICAL STRATEGY BRIEFING
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-white font-sans">
-                Request a Demo
+                Book a Strategy Call
               </h2>
               <p className="text-sm text-neutral-400 mt-1">
-                See how SaqrFlow’s Agentic AI Platform scales across your enterprise data topology.
+                See how SaqrFlow connects your CRM, automations, and client workflows seamlessly.
               </p>
             </div>
 
@@ -87,7 +86,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="Jane Doe"
-                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-cyan-400"
+                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white/40"
                   />
                 </div>
                 <div>
@@ -99,8 +98,8 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                     required
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    placeholder="jane@enterprise.com"
-                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-cyan-400"
+                    placeholder="jane@agency.com"
+                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white/40"
                   />
                 </div>
               </div>
@@ -108,15 +107,15 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-mono uppercase text-neutral-400 mb-1.5">
-                    Organization / Company *
+                    Agency / Company *
                   </label>
                   <input
                     type="text"
                     required
                     value={form.company}
                     onChange={(e) => setForm({ ...form, company: e.target.value })}
-                    placeholder="Enterprise Corp"
-                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-cyan-400"
+                    placeholder="Acme Marketing"
+                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white/40"
                   />
                 </div>
                 <div>
@@ -126,29 +125,30 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
                   <select
                     value={form.industry}
                     onChange={(e) => setForm({ ...form, industry: e.target.value })}
-                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white focus:outline-none focus:border-cyan-400"
+                    className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white focus:outline-none focus:border-white/40"
                   >
+                    <option value="Marketing & Lead Gen Agencies">Marketing & Lead Gen Agencies</option>
                     <option value="Defense & Intelligence">Defense & Intelligence</option>
                     <option value="Maritime">Maritime</option>
                     <option value="Manufacturing">Manufacturing</option>
                     <option value="Federal">Federal</option>
                     <option value="Oil & Gas">Oil & Gas</option>
                     <option value="Utilities">Utilities</option>
-                    <option value="Healthcare & Life Sciences">Healthcare & Life Sciences</option>
+                    <option value="Healthcare">Healthcare</option>
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-xs font-mono uppercase text-neutral-400 mb-1.5">
-                  Operational Focus & Requirements
+                  Current Stack & Requirements
                 </label>
                 <textarea
                   rows={3}
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  placeholder="E.g., Predictive maintenance for 200+ turbines, sovereign on-prem deployment..."
-                  className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-cyan-400"
+                  placeholder="E.g., GoHighLevel integration, WhatsApp lead routing, Zapier/Make replacement..."
+                  className="w-full px-3.5 py-2.5 rounded bg-black/60 border border-white/15 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-white/40"
                 />
               </div>
 
@@ -163,7 +163,7 @@ export default function DemoModal({ isOpen, onClose }: DemoModalProps) {
               </div>
 
               <p className="text-[11px] text-neutral-500 text-center font-mono">
-                Sovereign data protocols strictly observed. Zero third-party telemetry.
+                White-label delivery. Zero third-party branding.
               </p>
             </form>
           </>

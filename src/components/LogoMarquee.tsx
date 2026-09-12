@@ -37,7 +37,7 @@ export default function LogoMarquee() {
               key={`org-1-${index}`}
               className="flex items-center gap-2.5 opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-default select-none grayscale"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
               <span className="text-base sm:text-lg font-bold tracking-tight text-white font-sans whitespace-nowrap">
                 {org.icon}
               </span>
@@ -53,7 +53,7 @@ export default function LogoMarquee() {
               key={`org-2-${index}`}
               className="flex items-center gap-2.5 opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-default select-none grayscale"
             >
-              <div className="w-1.5 h-1.5 rounded-full bg-cyan-400/50" />
+              <div className="w-1.5 h-1.5 rounded-full bg-white/20" />
               <span className="text-base sm:text-lg font-bold tracking-tight text-white font-sans whitespace-nowrap">
                 {org.icon}
               </span>

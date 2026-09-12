@@ -23,7 +23,7 @@ export default function Home() {
   const [searchOpen, setSearchOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen bg-black text-white selection:bg-cyan-500/30 selection:text-white">
+    <div className="relative min-h-screen bg-black text-white selection:bg-white/20 selection:text-white">
       {/* C3.ai Style Enterprise Navigation & Mega Dropdowns */}
       <MegaHeader
         onOpenDemo={() => setDemoOpen(true)}

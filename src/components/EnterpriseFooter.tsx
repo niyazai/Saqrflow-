@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { BOOK_A_CALL_HREF } from "@/lib/content";
 
 interface EnterpriseFooterProps {
   onOpenDemo?: () => void;
@@ -28,51 +29,47 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
               <span className="text-xl font-bold tracking-tight text-white font-sans">
                 SaqrFlow
               </span>
-              <span className="text-[10px] font-mono tracking-widest text-cyan-400 font-semibold px-1.5 py-0.5 rounded bg-cyan-950/60 border border-cyan-800/50">
-                AI
-              </span>
             </Link>
 
             <p className="text-sm text-neutral-400 leading-relaxed mb-8 max-w-sm">
-              SaqrFlow is the enterprise artificial intelligence software company delivering the agentic operating system for real-time decision making and autonomous execution at scale.
+              SaqrFlow builds the CRM, automation, and lead-flow systems that agencies deliver to their own clients — under your brand, never ours.
             </p>
 
             <div className="p-4 rounded-xl border border-white/10 bg-white/[0.02] max-w-sm">
-              <p className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-1">
-                Enterprise Briefing
+              <p className="text-xs font-mono text-neutral-300 uppercase tracking-wider mb-1">
+                Agency & Enterprise Briefing
               </p>
-              <p className="text-xs text-neutral-300 mb-3">
-                Experience an architectural walkthrough customized to your enterprise data topology.
+              <p className="text-xs text-neutral-400 mb-3">
+                Experience an architectural walkthrough customized to your workflows and client delivery.
               </p>
-              <button
-                type="button"
-                onClick={onOpenDemo}
-                className="text-xs font-semibold text-white hover:text-cyan-300 inline-flex items-center gap-1.5"
+              <a
+                href={BOOK_A_CALL_HREF}
+                className="text-xs font-semibold text-white hover:text-neutral-300 inline-flex items-center gap-1.5"
               >
-                <span>Request Executive Briefing</span>
+                <span>Book a Technical Strategy Call</span>
                 <span>↗</span>
-              </button>
+              </a>
             </div>
           </div>
 
-          {/* Column 2: Applications */}
+          {/* Column 2: The System */}
           <div className="lg:col-span-2">
             <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
-              Applications
+              The System
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                "SaqrFlow Reliability",
-                "Production Schedule Optimization",
-                "SaqrFlow Demand Planning",
-                "Process Optimization",
-                "Inventory Optimization",
-                "Sourcing Optimization",
-                "All 40+ Applications",
+                { name: "Step 01: Capture", href: "#system" },
+                { name: "Step 02: CRM", href: "#system" },
+                { name: "Step 03: Routing", href: "#system" },
+                { name: "Step 04: Follow-up", href: "#system" },
+                { name: "Step 05: Integration", href: "#system" },
+                { name: "Step 06: Reporting", href: "#system" },
+                { name: "Lead Qualification Proof", href: "#proof" },
               ].map((item, i) => (
                 <li key={i}>
-                  <Link href="#software" className="hover:text-white transition-colors block py-0.5">
-                    {item}
+                  <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -88,8 +85,8 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
               {[
                 "SaqrFlow Studio",
                 "SaqrFlow Code",
-                "SaqrFlow Generative AI",
-                "Agentic AI Platform",
+                "Connected Pipelines",
+                "Operating Runtime",
               ].map((item, i) => (
                 <li key={i}>
                   <Link href="#software" className="hover:text-white transition-colors block py-0.5">
@@ -104,13 +101,13 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
+                "Marketing Agencies",
                 "Defense & Intelligence",
                 "Maritime",
                 "Manufacturing",
-                "Federal",
                 "Oil & Gas",
                 "Utilities",
-                "Healthcare & Life Sciences",
+                "Healthcare",
               ].map((item, i) => (
                 <li key={i}>
                   <Link href="#industries" className="hover:text-white transition-colors block py-0.5">
@@ -121,26 +118,24 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             </ul>
           </div>
 
-          {/* Column 4: Resources */}
+          {/* Column 4: Pricing & Fit */}
           <div className="lg:col-span-2">
             <p className="text-xs font-mono font-semibold uppercase tracking-wider text-neutral-200 mb-4 pb-2 border-b border-white/10">
-              Resources
+              Pricing & Fit
             </p>
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
-                "Case Studies",
-                "Analyst Reports",
-                "Events & Summits",
-                "Engineering Blog",
-                "SaqrFlow Academy",
-                "Documentation",
-                "What Is Enterprise AI?",
-                "What Is Machine Learning?",
-                "Glossary",
+                { name: "Paid Proof (£300)", href: "#pricing" },
+                { name: "Founding Access (£1,000/mo)", href: "#pricing" },
+                { name: "Standard (£1,500/mo)", href: "#pricing" },
+                { name: "Advanced (£2,500/mo)", href: "#pricing" },
+                { name: "Good Fit vs Not a Fit", href: "#fit" },
+                { name: "How It Runs (5 Steps)", href: "#fit" },
+                { name: "Customer Stories", href: "#stories" },
               ].map((item, i) => (
                 <li key={i}>
-                  <Link href="#stories" className="hover:text-white transition-colors block py-0.5">
-                    {item}
+                  <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -155,14 +150,10 @@ export default function EnterpriseFooter({ onOpenDemo }: EnterpriseFooterProps) 
             <ul className="space-y-2.5 text-sm text-neutral-400">
               {[
                 "About SaqrFlow",
-                "Leadership",
-                "Newsroom",
-                "Customers",
-                "Testimonials",
-                "Partners",
-                "Investor Relations",
+                "Agency Partner Network",
+                "Security & Compliance",
+                "Contact",
                 "Careers",
-                "SaqrFlow Fellows",
               ].map((item, i) => (
                 <li key={i}>
                   <Link href="#stories" className="hover:text-white transition-colors block py-0.5">

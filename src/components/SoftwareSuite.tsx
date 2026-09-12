@@ -1,25 +1,21 @@
 "use client";
 
-import { useState } from "react";
-
 interface SoftwareSuiteProps {
   onOpenDemo?: () => void;
 }
 
 export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
-  const [activeTab, setActiveTab] = useState(0);
-
   const softwareProducts = [
     {
       id: "agentic-platform",
       badge: "CORE RUNTIME",
-      title: "SaqrFlow Agentic AI Platform",
+      title: "SaqrFlow Operating Platform",
       description:
-        "The ontology-powered operating system for building, deploying, and governing Enterprise AI at scale.",
-      highlight: "Unified Enterprise Semantic Ontology",
+        "The ontology-powered operating system for building, deploying, and governing enterprise automation at scale.",
+      highlight: "Unified Enterprise Semantic Architecture",
       mockType: "agentic",
       stats: [
-        { label: "Active Enterprise Agents", value: "1,240+" },
+        { label: "Active Pipelines", value: "1,240+" },
         { label: "Execution Latency", value: "< 14ms" },
         { label: "Governance Compliance", value: "100%" },
       ],
@@ -27,57 +23,57 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
     {
       id: "studio",
       badge: "DEVELOPMENT ENVIRONMENT",
-      title: "SaqrFlow AI Studio",
+      title: "SaqrFlow Studio",
       description:
-        "The development environment where engineers and business analysts design, build, and deploy Enterprise AI applications.",
+        "The development environment where engineers design, build, and deploy enterprise workflows and connected systems.",
       highlight: "Full-Lifecycle Low-Code & Pro-Code Tooling",
       mockType: "studio",
       stats: [
         { label: "Pre-Built Connectors", value: "120+" },
         { label: "Time-to-Production", value: "1/10th" },
-        { label: "Model Frameworks", value: "All Major" },
+        { label: "Integration Stack", value: "GHL, HubSpot, SQL" },
       ],
     },
     {
       id: "applications",
       badge: "PRODUCTION APPLICATIONS",
-      title: "Enterprise AI Applications",
+      title: "Enterprise Applications",
       description:
-        "A portfolio of production-ready AI applications that encode decades of domain expertise across sectors.",
+        "A portfolio of production-ready applications that encode decades of domain expertise across sectors.",
       highlight: "40+ Turnkey High-Value Solutions",
       mockType: "apps",
       stats: [
         { label: "Pre-Built Applications", value: "40+" },
         { label: "Enterprise Value Tracked", value: "$4.2B" },
-        { label: "Annual Sensor Records", value: "1.4 Trillion" },
+        { label: "Annual Records Processed", value: "1.4 Trillion" },
       ],
     },
     {
       id: "generative-ai",
-      badge: "ENTERPRISE RAG",
-      title: "SaqrFlow Generative AI",
+      badge: "VERIFIED REASONING",
+      title: "SaqrFlow Intelligence",
       description:
-        "Enterprise-grade generative AI grounded in your proprietary data, delivering cited answers across every business function and industry.",
-      highlight: "Deterministic, Hallucination-Free Reasoning",
+        "Enterprise intelligence grounded in your proprietary data, delivering cited answers and automated decisions.",
+      highlight: "Deterministic, Verifiable Reasoning",
       mockType: "genai",
       stats: [
         { label: "Citation Verifiability", value: "100%" },
         { label: "Access Control Enforced", value: "RBAC & ABAC" },
-        { label: "Multi-Modal Ingest", value: "Text, CAD, Telemetry" },
+        { label: "Multi-Modal Ingest", value: "CRM, Docs, Telemetry" },
       ],
     },
     {
       id: "code",
-      badge: "AUTONOMOUS SYNTHESIS",
+      badge: "WORKFLOW SYNTHESIS",
       title: "SaqrFlow Code",
       description:
-        "Natural language to production-ready Enterprise AI application — built by autonomous agents, governed from day one.",
+        "Natural language to production-ready enterprise workflows — built by autonomous agents, governed from day one.",
       highlight: "Zero-Shot App Generation onto Enterprise Ontology",
       mockType: "code",
       stats: [
         { label: "Generation Speed", value: "Minutes" },
         { label: "Automated Unit Tests", value: "Generated" },
-        { label: "Deployment Target", value: "Kubernetes / Bare Metal" },
+        { label: "Deployment Target", value: "Cloud / On-Prem" },
       ],
     },
   ];
@@ -97,7 +93,7 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
           </div>
           <div className="lg:col-span-4 flex flex-col justify-between gap-6">
             <p className="text-base sm:text-lg text-neutral-600 leading-relaxed font-normal">
-              A complete suite of Enterprise AI products, each built on 15+ years of domain intelligence.
+              A complete suite of enterprise products, each built on 15+ years of domain intelligence and operational execution.
             </p>
             <div>
               <button
@@ -139,7 +135,7 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                 }`}
               >
                 <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-neutral-200/80 border border-neutral-300 text-[11px] font-mono uppercase tracking-wider text-neutral-700 mb-4">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-600" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-neutral-800" />
                   {prod.badge}
                 </div>
 
@@ -169,7 +165,7 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                   <button
                     type="button"
                     onClick={onOpenDemo}
-                    className="group inline-flex items-center gap-2 text-sm font-semibold text-[#111418] hover:text-blue-600 transition-colors"
+                    className="group inline-flex items-center gap-2 text-sm font-semibold text-[#111418] hover:text-neutral-600 transition-colors"
                   >
                     <span>Discover {prod.title}</span>
                     <span className="transition-transform group-hover:translate-x-1">
@@ -189,14 +185,14 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                   {/* Mock Window Header */}
                   <div className="flex items-center justify-between pb-4 mb-5 border-b border-white/10 text-xs font-mono">
                     <div className="flex items-center gap-2">
-                      <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-green-500/80" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-neutral-600" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-neutral-600" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-neutral-600" />
                       <span className="ml-2 text-neutral-400">
                         saqrflow://runtime/{prod.id}
                       </span>
                     </div>
-                    <span className="text-cyan-400 font-medium">LIVE TELEMETRY</span>
+                    <span className="text-neutral-400 font-medium font-mono text-[11px]">ACTIVE RUNTIME</span>
                   </div>
 
                   {/* Dynamic Mockup Body */}
@@ -204,42 +200,42 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                     <div className="space-y-4 font-mono text-xs">
                       <div className="grid grid-cols-3 gap-3">
                         <div className="p-3 rounded bg-white/5 border border-white/10">
-                          <span className="text-neutral-400 block text-[10px]">ONTOLOGY NODES</span>
+                          <span className="text-neutral-400 block text-[10px]">CONNECTED NODES</span>
                           <span className="text-lg font-bold text-white font-sans">184,920</span>
-                          <span className="text-[10px] text-emerald-400">Synchronized</span>
+                          <span className="text-[10px] text-neutral-400">Synchronized</span>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
-                          <span className="text-neutral-400 block text-[10px]">REASONING THREADS</span>
-                          <span className="text-lg font-bold text-cyan-400 font-sans">64 Cores</span>
+                          <span className="text-neutral-400 block text-[10px]">EXECUTION THREADS</span>
+                          <span className="text-lg font-bold text-white font-sans">64 Cores</span>
                           <span className="text-[10px] text-neutral-400">0.02% Error Rate</span>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
                           <span className="text-neutral-400 block text-[10px]">SECURITY GUARDRAILS</span>
-                          <span className="text-lg font-bold text-emerald-400 font-sans">ACTIVE</span>
+                          <span className="text-lg font-bold text-white font-sans">ACTIVE</span>
                           <span className="text-[10px] text-neutral-400">Zero Exfiltration</span>
                         </div>
                       </div>
 
                       <div className="p-4 rounded bg-black/60 border border-white/10 space-y-2">
                         <div className="flex items-center justify-between text-neutral-400 pb-2 border-b border-white/5 text-[11px]">
-                          <span>AGENT CLUSTER</span>
+                          <span>WORKFLOW CLUSTER</span>
                           <span>TASK DEPLOYMENT</span>
                           <span>STATUS</span>
                         </div>
                         <div className="flex items-center justify-between text-white text-[11px]">
-                          <span className="text-cyan-300">agent-turbomachinery-08</span>
-                          <span className="text-neutral-300">Bearing vibration forecast #441</span>
-                          <span className="text-emerald-400">OPTIMAL</span>
+                          <span className="text-neutral-300">turbomachinery-lead-08</span>
+                          <span className="text-neutral-400">Bearing vibration forecast #441</span>
+                          <span className="text-white font-semibold">OPTIMAL</span>
                         </div>
                         <div className="flex items-center justify-between text-white text-[11px]">
-                          <span className="text-cyan-300">agent-fleet-inventory-21</span>
-                          <span className="text-neutral-300">Re-route spares to Singapore dock</span>
-                          <span className="text-cyan-400">EXECUTING</span>
+                          <span className="text-neutral-300">agency-inventory-21</span>
+                          <span className="text-neutral-400">Re-route leads to UK South hub</span>
+                          <span className="text-neutral-300">EXECUTING</span>
                         </div>
                         <div className="flex items-center justify-between text-white text-[11px]">
-                          <span className="text-cyan-300">agent-grid-telemetry-04</span>
-                          <span className="text-neutral-300">Transformer phase angle adjust</span>
-                          <span className="text-emerald-400">VERIFIED</span>
+                          <span className="text-neutral-300">grid-telemetry-04</span>
+                          <span className="text-neutral-400">Transformer phase angle adjust</span>
+                          <span className="text-white font-semibold">VERIFIED</span>
                         </div>
                       </div>
                     </div>
@@ -248,25 +244,25 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                   {prod.mockType === "studio" && (
                     <div className="space-y-4">
                       <div className="flex items-center justify-between bg-black/50 p-3 rounded border border-white/10 text-xs font-mono">
-                        <span className="text-neutral-400">PIPELINE: SAP_ERP → OPC_UA → ONTO_MAPPER → ML_INFERENCE</span>
-                        <span className="text-emerald-400">● 100% HEALTH</span>
+                        <span className="text-neutral-400">PIPELINE: CRM_INGEST → LEAD_ROUTER → WHATSAPP_QA → DASHBOARD</span>
+                        <span className="text-white">● 100% HEALTH</span>
                       </div>
                       <div className="grid grid-cols-2 gap-3 text-xs font-mono">
                         <div className="p-3 rounded bg-white/5 border border-white/10">
-                          <p className="text-neutral-400 mb-1">DATA CONNECTORS</p>
-                          <p className="text-white font-medium">Snowflake, Databricks, Kafka, SCADA, Salesforce</p>
+                          <p className="text-neutral-400 mb-1">CONNECTORS</p>
+                          <p className="text-white font-medium">GoHighLevel, HubSpot, Zapier, Make, n8n, Webhooks</p>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
-                          <p className="text-neutral-400 mb-1">AI MODEL SELECTION</p>
-                          <p className="text-white font-medium">Gradient Boosted, Deep Temporal, Transformer Agents</p>
+                          <p className="text-neutral-400 mb-1">AUTOMATION ENGINE</p>
+                          <p className="text-white font-medium">De-duplication, Multi-channel Chase, Human Fallback</p>
                         </div>
                       </div>
-                      <div className="h-16 rounded bg-gradient-to-r from-blue-900/30 via-cyan-900/20 to-purple-900/30 border border-white/10 flex items-center justify-around text-xs font-mono text-neutral-300">
-                        <span>[Ingest: 1.2M msg/s]</span>
+                      <div className="h-16 rounded bg-neutral-900 border border-white/10 flex items-center justify-around text-xs font-mono text-neutral-300">
+                        <span>[Forms & Ads Ingest]</span>
                         <span>→</span>
-                        <span>[Ontology Normalization]</span>
+                        <span>[Lead Scoring & Routing]</span>
                         <span>→</span>
-                        <span className="text-cyan-400">[Automated Execution]</span>
+                        <span className="text-white font-semibold">[CRM Hand-off]</span>
                       </div>
                     </div>
                   )}
@@ -274,31 +270,31 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                   {prod.mockType === "apps" && (
                     <div className="space-y-4">
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-mono">
-                        <div className="p-3 rounded bg-cyan-950/40 border border-cyan-800/40">
+                        <div className="p-3 rounded bg-white/5 border border-white/10">
                           <span className="text-neutral-400 block text-[10px]">RELIABILITY</span>
-                          <span className="text-sm font-bold text-cyan-300">99.85%</span>
+                          <span className="text-sm font-bold text-white">99.85%</span>
                           <span className="text-[10px] text-neutral-400">Uptime</span>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
                           <span className="text-neutral-400 block text-[10px]">DEMAND ACCURACY</span>
                           <span className="text-sm font-bold text-white">96.4%</span>
-                          <span className="text-[10px] text-emerald-400">+18% YoY</span>
+                          <span className="text-[10px] text-neutral-400">+18% YoY</span>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
                           <span className="text-neutral-400 block text-[10px]">ENERGY SAVED</span>
                           <span className="text-sm font-bold text-white">14.2 GWh</span>
-                          <span className="text-[10px] text-emerald-400">FY26</span>
+                          <span className="text-[10px] text-neutral-400">FY26</span>
                         </div>
                         <div className="p-3 rounded bg-white/5 border border-white/10">
                           <span className="text-neutral-400 block text-[10px]">INVENTORY SLACK</span>
                           <span className="text-sm font-bold text-white">-28%</span>
-                          <span className="text-[10px] text-emerald-400">Lean Stock</span>
+                          <span className="text-[10px] text-neutral-400">Lean Stock</span>
                         </div>
                       </div>
                       <div className="p-4 rounded bg-black/60 border border-white/10 text-xs font-mono text-neutral-300 space-y-1">
-                        <p className="text-cyan-400 font-bold mb-1">CRITICAL ALERTS PREVENTED (LAST 24 HOURS):</p>
-                        <p className="text-neutral-400">› Furnace #04: Coking risk averted via temperature trim (-12°C)</p>
-                        <p className="text-neutral-400">› Turbine Stage 3: Bearing anomaly flagged 14 days prior to breakdown</p>
+                        <p className="text-white font-bold mb-1">CRITICAL ALERTS RESOLVED (LAST 24 HOURS):</p>
+                        <p className="text-neutral-400">› Lead queue: Ingestion spike handled with zero lead drop</p>
+                        <p className="text-neutral-400">› WhatsApp API: Out-of-bounds message caught and routed to human agent</p>
                       </div>
                     </div>
                   )}
@@ -308,17 +304,17 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                       <div className="p-3 rounded bg-black/60 border border-white/10">
                         <span className="text-neutral-400 text-[10px] block">ENTERPRISE QUERY</span>
                         <span className="text-white font-sans font-medium text-sm">
-                          "What is the scheduled downtime impact if cracking furnace F-102 undergoes decoking today?"
+                          "What is the scheduled downtime impact if cracking furnace F-102 undergoes maintenance today?"
                         </span>
                       </div>
-                      <div className="p-3.5 rounded bg-cyan-950/30 border border-cyan-800/40 text-neutral-200 leading-relaxed font-sans text-xs">
-                        <p className="font-semibold text-cyan-300 font-mono text-[11px] mb-1">
+                      <div className="p-3.5 rounded bg-white/5 border border-white/10 text-neutral-200 leading-relaxed font-sans text-xs">
+                        <p className="font-semibold text-white font-mono text-[11px] mb-1">
                           GROUNDED REASONING WITH 100% AUDIT TRAIL:
                         </p>
-                        Decoking F-102 today results in a net throughput reduction of 410 bbl/day, offset by switching 60% load to F-103. Overall margin impact is constrained to +$12,400 due to off-peak tariff timing.
-                        <div className="mt-2 pt-2 border-t border-cyan-800/30 flex items-center gap-3 text-[10px] font-mono text-cyan-400">
-                          <span>[SOURCE: DOW_OPERATIONS_MANUAL_V4.PDF §12.3]</span>
-                          <span>[SCADA_FEED_09:14:02Z]</span>
+                        Maintenance on F-102 today results in a net throughput reduction of 410 bbl/day, offset by switching 60% load to F-103.
+                        <div className="mt-2 pt-2 border-t border-white/10 flex items-center gap-3 text-[10px] font-mono text-neutral-400">
+                          <span>[SOURCE: OPERATIONS_MANUAL_V4.PDF §12.3]</span>
+                          <span>[TELEMETRY_FEED_09:14:02Z]</span>
                         </div>
                       </div>
                     </div>
@@ -327,16 +323,16 @@ export default function SoftwareSuite({ onOpenDemo }: SoftwareSuiteProps) {
                   {prod.mockType === "code" && (
                     <div className="space-y-3 font-mono text-xs">
                       <div className="p-3 rounded bg-black/70 border border-white/10 text-neutral-300">
-                        <span className="text-neutral-500 block text-[10px]">NATURAL LANGUAGE SPECIFICATION</span>
-                        <span className="text-cyan-300 font-semibold">
-                          $ saqrflow generate app --name "predictive-subsea-leak" --input "sensor.pressure, sensor.flow"
+                        <span className="text-neutral-500 block text-[10px]">SPECIFICATION PROMPT</span>
+                        <span className="text-white font-semibold">
+                          $ saqrflow deploy workflow --name "ghl-whatsapp-router" --crm "gohighlevel"
                         </span>
                       </div>
                       <div className="p-3.5 rounded bg-white/[0.03] border border-white/10 text-neutral-400 text-[11px] space-y-1">
-                        <p className="text-emerald-400">✓ Ingesting telemetry schema from Subsea Pipeline Ontology...</p>
-                        <p className="text-emerald-400">✓ Generating Kalman-Filter anomaly detection agent...</p>
-                        <p className="text-emerald-400">✓ Synthesizing REST endpoints with mutual TLS authentication...</p>
-                        <p className="text-cyan-400 font-bold mt-2">DEPLOYED TO AIR-GAPPED K8S CLUSTER IN 42 SECONDS.</p>
+                        <p className="text-neutral-300">✓ Ingesting lead schema from Webhook endpoint...</p>
+                        <p className="text-neutral-300">✓ Configuring de-duplication rules & pipeline stages...</p>
+                        <p className="text-neutral-300">✓ Activating WhatsApp follow-up sequence with fallback...</p>
+                        <p className="text-white font-bold mt-2">DEPLOYED AND LIVE IN PRODUCTION.</p>
                       </div>
                     </div>
                   )}

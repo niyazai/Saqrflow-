@@ -69,7 +69,7 @@ const STORIES = [
       { value: "100%", label: "air-gapped sovereign compliance" },
     ],
     ctaText: "Explore Defense Architecture",
-    accentColor: "from-cyan-950/40",
+    accentColor: "from-neutral-900/60",
   },
 ];
 
@@ -87,7 +87,7 @@ export default function CustomerStories({ onOpenDemo }: CustomerStoriesProps) {
         {/* Title row */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start pb-14 border-b border-white/10">
           <div className="lg:col-span-8">
-            <span className="text-xs font-mono uppercase tracking-widest text-cyan-400 block mb-3">
+            <span className="text-xs font-mono uppercase tracking-widest text-neutral-400 block mb-3">
               Field-Tested At Scale
             </span>
             <h2 className="text-4xl sm:text-6xl font-bold tracking-tight text-white font-sans">
@@ -141,7 +141,7 @@ export default function CustomerStories({ onOpenDemo }: CustomerStoriesProps) {
                     <span className="text-xs font-mono text-neutral-500">
                       [0{index + 1}]
                     </span>
-                    <span className="text-2xl sm:text-4xl font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors font-sans">
+                    <span className="text-2xl sm:text-4xl font-bold tracking-tight text-white group-hover:text-neutral-300 transition-colors font-sans">
                       {story.company}
                     </span>
                   </div>
@@ -184,7 +184,7 @@ export default function CustomerStories({ onOpenDemo }: CustomerStoriesProps) {
                               <span className="text-2xl sm:text-3xl font-bold text-white font-mono">
                                 {story.company.slice(0, 3).toUpperCase()}
                               </span>
-                              <span className="block text-[10px] font-mono text-cyan-400 mt-1">
+                              <span className="block text-[10px] font-mono text-neutral-400 mt-1">
                                 VERIFIED LEADER
                               </span>
                             </div>

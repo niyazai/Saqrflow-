@@ -26,7 +26,6 @@
   --color-c3-light-card: #ffffff;
   --color-c3-light-text: #111418;
   --color-c3-light-muted: #555e6d;
-  --color-c3-cyan: #00d2ff;
   --color-c3-blue: #0066ff;
   --color-c3-gray: #8892a0;
   --color-c3-white: #ffffff;
@@ -56,7 +55,6 @@
   --color-c3-light-card: var(--color-c3-light-card);
   --color-c3-light-text: var(--color-c3-light-text);
   --color-c3-light-muted: var(--color-c3-light-muted);
-  --color-c3-cyan: var(--color-c3-cyan);
   --color-c3-blue: var(--color-c3-blue);
   --color-c3-gray: var(--color-c3-gray);
   --color-c3-white: var(--color-c3-white);

@@ -15,10 +15,10 @@ const SEARCH_ITEMS = [
   { title: "Founding Partner Access (Spots Available)", category: "Pricing", href: "#pricing" },
   { title: "Who This Is For (Good Fit vs Not a Fit)", category: "Fit Criteria", href: "#fit" },
   { title: "How An Engagement Runs (5 Steps)", category: "Process", href: "#fit" },
-  { title: "SaqrFlow Agentic AI Platform", category: "Platform", href: "#software" },
-  { title: "SaqrFlow AI Studio (Connectors & Pipelines)", category: "Platform", href: "#software" },
+  { title: "Operating Platform", category: "Platform", href: "#software" },
+  { title: "SaqrFlow Studio (Connectors & Pipelines)", category: "Platform", href: "#software" },
   { title: "SaqrFlow Code (Autonomous App Synthesis)", category: "Platform", href: "#software" },
-  { title: "Enterprise AI Applications (40+ Turnkey Apps)", category: "Applications", href: "#software" },
+  { title: "Enterprise Applications (40+ Turnkey Apps)", category: "Applications", href: "#software" },
   { title: "Defense & Intelligence Sector", category: "Industry", href: "#industries" },
   { title: "Maritime & Naval Operations", category: "Industry", href: "#industries" },
   { title: "Manufacturing Process & Yield Optimization", category: "Industry", href: "#industries" },
@@ -106,12 +106,12 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition-colors group"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-cyan-400 font-mono text-sm">›</span>
+                  <span className="text-neutral-400 group-hover:text-white font-mono text-sm">›</span>
                   <span className="text-sm font-medium text-neutral-200 group-hover:text-white">
                     {item.title}
                   </span>
                 </div>
-                <span className="text-xs font-mono text-neutral-400 border border-white/10 px-2 py-0.5 rounded group-hover:border-cyan-500/40 group-hover:text-cyan-300">
+                <span className="text-xs font-mono text-neutral-400 border border-white/10 px-2 py-0.5 rounded group-hover:border-white/30 group-hover:text-white">
                   {item.category}
                 </span>
               </Link>
