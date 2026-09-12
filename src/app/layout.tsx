@@ -13,21 +13,36 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SaqrFlow — White-label technical fulfilment for UK agencies",
+  title: "SaqrFlow | The Agentic Operating System for Enterprise AI",
   description:
-    "SaqrFlow builds the CRM, automation, and lead-flow systems that UK marketing agencies deliver to their own clients — under the agency's brand, never ours.",
+    "SaqrFlow is the enterprise artificial intelligence software company delivering the agentic operating system, applications, and platform for real-time decision making.",
   icons: {
     icon: "/brand/saqrflow-mark.png",
   },
+  openGraph: {
+    title: "SaqrFlow | The Agentic Operating System for Enterprise AI",
+    description:
+      "Turn operational data into real-time decision making and autonomous execution at scale.",
+    url: "https://saqrflow.com",
+    siteName: "SaqrFlow",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-ink">{children}</body>
+      <body className="min-h-full flex flex-col bg-black text-white selection:bg-cyan-500/30 selection:text-white">
+        {children}
+      </body>
     </html>
   );
 }
