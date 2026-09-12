@@ -14,18 +14,18 @@ export default function HeroBanner({ onOpenDemo }: HeroBannerProps) {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <Image
           src="/images/hero-bg.jpg"
-          alt="Enterprise Infrastructure Architecture"
+          alt="Global Enterprise Telemetry & Infrastructure"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-85 select-none pointer-events-none"
+          className="object-cover object-[center_35%] opacity-90 select-none pointer-events-none"
         />
         
-        {/* Balanced contrast overlay: preserves photo clarity while keeping typography crisp */}
-        <div className="absolute inset-0 bg-black/45 pointer-events-none" />
+        {/* Subtle contrast tint keeping the cosmic telemetry visible while preserving text legibility */}
+        <div className="absolute inset-0 bg-black/35 pointer-events-none" />
         
         {/* Smooth gradient fading into the black section below */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black pointer-events-none" />
       </div>
 
       {/* Main Hero Content */}
